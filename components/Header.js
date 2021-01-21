@@ -1,23 +1,31 @@
-import { PageWithHeader, TopNav, Image, Button } from 'bumbag'
+import { PageWithHeader, TopNav, Icon, useColorMode, applyTheme } from 'bumbag'
+
+const HeaderIcon = applyTheme(Icon, {
+  styles: {
+    base: {
+      cursor: 'pointer',
+      fontSize: '1.3rem'
+    }
+  }
+})
 
 export default function Header ({ children }) {
+  const { colorMode, setColorMode } = useColorMode()
+
   return (
     <PageWithHeader header={
       <TopNav>
-        <TopNav.Section>
-          <TopNav.Item href='https://bumbag.style' fontWeight='semibold'>
-            <Image src='https://bumbag.style/logo-dark.png' height='44px' />
-          </TopNav.Item>
-          <TopNav.Item href='#'>Get started</TopNav.Item>
-          <TopNav.Item href='#'>Components</TopNav.Item>
+        <TopNav.Section marginLeft='major-1'>
+          <TopNav.Item href='/'>Collector</TopNav.Item>
         </TopNav.Section>
-        <TopNav.Section marginRight='major-2'>
-          <TopNav.Item>
-            <Button variant='ghost' palette='primary'>Sign up</Button>
-          </TopNav.Item>
-          <TopNav.Item>
-            <Button palette='primary'>Login</Button>
-          </TopNav.Item>
+        <TopNav.Section marginRight='major-4'>
+        <TopNav.Item>
+          <HeaderIcon
+            icon={`solid-${colorMode === 'light' ? 'moon' : 'sun'}`}
+            onClick={() => setColorMode(colorMode === 'light' ? 'dark' : 'light')}
+          />
+        </TopNav.Item>
+
         </TopNav.Section>
       </TopNav>
     }>

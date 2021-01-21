@@ -2,13 +2,13 @@ import NextApp from 'next/app'
 import { Provider as BumbagProvider } from 'bumbag'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 
 const theme = {
   Icon: {
     iconSets: [
       {
-        icons: [faSearch],
+        icons: [faSearch, faMoon, faSun],
         prefix: 'solid-',
         type: 'font-awesome'
       }
