@@ -1,10 +1,9 @@
-import { SideNav, PageWithSidebar } from 'bumbag'
+import { SideNav } from 'bumbag'
 import SearchBar from '../components/SearchBar'
 
-export default function Sidebar ({ children }) {
+export default function Sidebar () {
   return (
-    <PageWithSidebar sidebar={
-      <SideNav defaultSelectedId='home'>
+    <SideNav defaultSelectedId='home'>
         <SearchBar />
 
         <SideNav.Level>
@@ -15,10 +14,50 @@ export default function Sidebar ({ children }) {
           <SideNav.Item href='#' navId='base-set'>Base Set</SideNav.Item>
           <SideNav.Item href='#' navId='jungle'>Jungle</SideNav.Item>
           <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
+          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
         </SideNav.Level>
       </SideNav>
-    }>
-      {children}
-    </PageWithSidebar>
   )
 }

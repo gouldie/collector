@@ -4,36 +4,59 @@ import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import { faSearch, faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 
-const theme = {
-  Icon: {
-    iconSets: [
-      {
-        icons: [faSearch, faMoon, faSun],
-        prefix: 'solid-',
-        type: 'font-awesome'
-      }
-    ]
-  },
-  SideNav: {
-    Level: {
-      Title: {
+const theme = () => {
+  return {
+    Icon: {
+      iconSets: [
+        {
+          icons: [faSearch, faMoon, faSun],
+          prefix: 'solid-',
+          type: 'font-awesome'
+        }
+      ]
+    },
+    SideNav: {
+      modes: {
+        dark: {
+          styles: {
+            base: {
+              borderRight: '1px solid var(--bb-palette-gray700)'
+            }
+          }
+        },
+        light: {
+          styles: {
+            base: {
+              borderRight: '1px solid var(--bb-palette-white800)'
+            }
+          }
+        }
+      },
+      styles: {
+        base: {
+          maxWidth: '250px'
+        }
+      },
+      Level: {
+        Title: {
+          styles: {
+            base: {
+              padding: '0 1.25rem',
+              fontSize: '0.75rem',
+              fontWeight: 700,
+              color: 'gray400'
+            }
+          }
+        }
+      },
+      Item: {
         styles: {
           base: {
             padding: '0 1.25rem',
-            fontSize: '0.75rem',
-            fontWeight: 700,
-            color: 'gray400'
+            fontSize: '0.875rem',
+            fontWeight: 500,
+            minHeight: '1.97rem'
           }
-        }
-      }
-    },
-    Item: {
-      styles: {
-        base: {
-          padding: '0 1.25rem',
-          fontSize: '0.875rem',
-          fontWeight: 500,
-          minHeight: '1.97rem'
         }
       }
     }
@@ -47,9 +70,10 @@ export default class App extends NextApp {
     return (
       <BumbagProvider isSSR theme={theme}>
         <Header>
-          <Sidebar>
-            <Component {...pageProps} />
-          </Sidebar>
+        <div style={{ display: 'flex' }}>
+          <Sidebar />
+          <Component {...pageProps} />
+        </div>
         </Header>
       </BumbagProvider>
     )

@@ -13,7 +13,7 @@ export default function Header ({ children }) {
   const { colorMode, setColorMode } = useColorMode()
 
   return (
-    <PageWithHeader header={
+    <PageWithHeader sticky header={
       <TopNav>
         <TopNav.Section marginLeft='major-1'>
           <TopNav.Item href='/'>Collector</TopNav.Item>
