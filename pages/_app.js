@@ -34,7 +34,11 @@ const theme = () => {
       },
       styles: {
         base: {
-          maxWidth: '250px'
+          maxWidth: '250px',
+          overflowY: 'auto',
+          '::-webkit-scrollbar': {
+            display: 'none'
+          }
         }
       },
       Level: {
@@ -70,7 +74,7 @@ export default class App extends NextApp {
     return (
       <BumbagProvider isSSR theme={theme}>
         <Header>
-        <div style={{ display: 'flex' }}>
+        <div style={{ display: 'flex', height: 'calc(100vh - 60px)' }}>
           <Sidebar />
           <Component {...pageProps} />
         </div>
