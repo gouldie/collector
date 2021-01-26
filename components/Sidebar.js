@@ -1,63 +1,30 @@
 import { SideNav } from 'bumbag'
 import SearchBar from '../components/SearchBar'
+import { useRouter } from 'next/router'
+import data from '../data/sets'
 
 export default function Sidebar () {
+  const router = useRouter()
+
   return (
-    <SideNav defaultSelectedId='home'>
-        <SearchBar />
+    <SideNav selectedId={router.query.set || '/'}>
+      <SearchBar />
 
-        <SideNav.Level>
-          <SideNav.Item href='#' navId='home'>Home</SideNav.Item>
-        </SideNav.Level>
+      <SideNav.Level>
+        <SideNav.Item navId='/' onClick={() => { router.push('/') }}>Home</SideNav.Item>
+      </SideNav.Level>
 
-        <SideNav.Level title='Base Set Series'>
-          <SideNav.Item href='#' navId='base-set'>Base Set</SideNav.Item>
-          <SideNav.Item href='#' navId='jungle'>Jungle</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-          <SideNav.Item href='#' navId='fossil'>Fossil</SideNav.Item>
-        </SideNav.Level>
-      </SideNav>
+      {
+        data.map(series => (
+          <SideNav.Level key={series.title} title={series.title}>
+            {
+              series.sets.map(set => (
+                <SideNav.Item key={set.id} navId={set.id} onClick={() => { router.push(`/sets/${set.id}`) }}>{set.name}</SideNav.Item>
+              ))
+            }
+          </SideNav.Level>
+        ))
+      }
+    </SideNav>
   )
 }

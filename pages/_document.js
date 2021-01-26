@@ -23,7 +23,10 @@ export default class MyDocument extends Document {
   render () {
     return (
       <Html>
-        <Head />
+        <Head>
+          <title>Create Next App</title>
+          <link rel='icon' href='/favicon.ico' />
+        </Head>
         <body>
           <InitializeColorMode />
           <Main />
