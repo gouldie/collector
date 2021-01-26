@@ -1,6 +1,16 @@
+import { css } from 'bumbag'
 import { faSearch, faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 
 export default {
+  global: {
+    styles: {
+      base: css`
+        .bb-PageWithSidebarSidebar {
+          border-right: none;
+        }
+      `
+    }
+  },
   Icon: {
     iconSets: [
       {
@@ -29,8 +39,9 @@ export default {
     },
     styles: {
       base: {
-        maxWidth: '250px',
-        overflowY: 'auto',
+        minHeight: '100%',
+        // maxWidth: '250px',
+        // overflowY: 'auto',
         '::-webkit-scrollbar': {
           display: 'none'
         }

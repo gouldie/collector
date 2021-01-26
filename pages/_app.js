@@ -12,12 +12,11 @@ export default class App extends NextApp {
     return (
       <BumbagProvider isSSR theme={theme}>
         <Header>
-          <div style={{ display: 'flex', height: 'calc(100vh - 60px)' }}>
-            <Sidebar />
+          <Sidebar>
             <Container {...pageProps}>
               <Component />
             </Container>
-          </div>
+          </Sidebar>
         </Header>
       </BumbagProvider>
     )
