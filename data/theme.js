@@ -1,10 +1,13 @@
 import { css } from 'bumbag'
-import { faSearch, faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faMoon, faSun, faBars } from '@fortawesome/free-solid-svg-icons'
 
 export default {
   global: {
     styles: {
       base: css`
+        body {
+          overflow-y: auto !important;
+        }
         .bb-PageWithSidebarSidebar {
           border-right: none;
         }
@@ -14,7 +17,7 @@ export default {
   Icon: {
     iconSets: [
       {
-        icons: [faSearch, faMoon, faSun],
+        icons: [faSearch, faMoon, faSun, faBars],
         prefix: 'solid-',
         type: 'font-awesome'
       }
@@ -40,8 +43,6 @@ export default {
     styles: {
       base: {
         minHeight: '100%',
-        // maxWidth: '250px',
-        // overflowY: 'auto',
         '::-webkit-scrollbar': {
           display: 'none'
         }

@@ -1,16 +1,9 @@
-import { PageWithHeader, TopNav, Icon, useColorMode, applyTheme } from 'bumbag'
-
-const HeaderIcon = applyTheme(Icon, {
-  styles: {
-    base: {
-      cursor: 'pointer',
-      fontSize: '1.3rem'
-    }
-  }
-})
+import { PageWithHeader, TopNav, useBreakpoint } from 'bumbag'
+import HamburgerIcon from '../components/icons/Hamburger'
+import ColorModeIcon from '../components/icons/ColorMode'
 
 export default function Header ({ children }) {
-  const { colorMode, setColorMode } = useColorMode()
+  const isDesktop = useBreakpoint('min-widescreen')
 
   return (
     <PageWithHeader sticky header={
@@ -20,10 +13,8 @@ export default function Header ({ children }) {
         </TopNav.Section>
         <TopNav.Section marginRight='major-4'>
         <TopNav.Item>
-          <HeaderIcon
-            icon={`solid-${colorMode === 'light' ? 'moon' : 'sun'}`}
-            onClick={() => setColorMode(colorMode === 'light' ? 'dark' : 'light')}
-          />
+          {isDesktop && <ColorModeIcon />}
+          {!isDesktop && <HamburgerIcon />}
         </TopNav.Item>
 
         </TopNav.Section>
