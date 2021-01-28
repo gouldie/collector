@@ -21,5 +21,17 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'jsx-quotes': ['error', 'prefer-single'],
     'react/prop-types': ['off']
-  }
+  },
+  overrides: [
+    {
+      files: [
+        '**/__tests__/*.{j,t}s?(x)',
+        '**/__mocks__/*.{j,t}s?(x)',
+        '**/tests/unit/**/*.spec.{j,t}s?(x)'
+      ],
+      env: {
+        jest: true
+      }
+    }
+  ]
 }

@@ -25,6 +25,7 @@ export default function SearchBar ({ filter, setFilter }) {
         before={<Input.Icon icon='solid-search' />}
         placeholder='Search'
         value={filter}
+        role='searchbox'
         onChange={e => setFilter(e.target.value)}
       />
     </CustomBox>
