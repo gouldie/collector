@@ -18,12 +18,14 @@ const FancyInput = applyTheme(Input, {
   }
 })
 
-export default function SearchBar () {
+export default function SearchBar ({ filter, setFilter }) {
   return (
     <CustomBox>
       <FancyInput
         before={<Input.Icon icon='solid-search' />}
         placeholder='Search'
+        value={filter}
+        onChange={e => setFilter(e.target.value)}
       />
     </CustomBox>
   )

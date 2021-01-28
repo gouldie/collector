@@ -1,12 +1,27 @@
+import { useState } from 'react'
 import { SideNav, PageWithSidebar, Box, useBreakpoint } from 'bumbag'
-import SearchBar from '../components/SearchBar'
 import { useRouter } from 'next/router'
-import data from '../data/sets'
+import SearchBar from '../components/SearchBar'
 import ColorModeIcon from '../components/icons/ColorMode'
+import data from '../data/sets'
 
 export default function Sidebar () {
   const router = useRouter()
   const isDesktop = useBreakpoint('min-widescreen')
+  const [filter, setFilter] = useState('')
+
+  const filteredData = data.reduce((accumulator, currentValue) => {
+    const filteredSets = currentValue.sets.filter(set => set.name.toLowerCase().includes(filter.toLowerCase()))
+
+    if (filteredSets.length > 0) {
+      accumulator.push({
+        ...currentValue,
+        sets: filteredSets
+      })
+    }
+
+    return accumulator
+  }, [])
 
   return (
     <PageWithSidebar collapsedSidebarWidth='260px' sidebar={
@@ -15,14 +30,14 @@ export default function Sidebar () {
           <ColorModeIcon />
         </Box>}
 
-        <SearchBar />
+        <SearchBar filter={filter} setFilter={setFilter} />
 
         <SideNav.Level>
           <SideNav.Item navId='/' onClick={() => { router.push('/') }}>Home</SideNav.Item>
         </SideNav.Level>
 
         {
-          data.map(series => (
+          filteredData.map(series => (
             <SideNav.Level key={series.title} title={series.title}>
               {
                 series.sets.map(set => (
