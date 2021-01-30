@@ -5,7 +5,7 @@ import SearchBar from '../components/SearchBar'
 import ColorModeIcon from '../components/icons/ColorMode'
 import data from '../data/sets'
 
-export default function Sidebar () {
+export default function Sidebar ({ children }) {
   const router = useRouter()
   const isDesktop = useBreakpoint('min-widescreen')
   const [filter, setFilter] = useState('')
@@ -49,7 +49,7 @@ export default function Sidebar () {
         }
       </SideNav>
     }>
-
+      {children}
     </PageWithSidebar>
 
   )
