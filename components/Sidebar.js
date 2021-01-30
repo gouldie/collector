@@ -3,7 +3,7 @@ import { SideNav, PageWithSidebar, Box, useBreakpoint } from 'bumbag'
 import { useRouter } from 'next/router'
 import SearchBar from '../components/SearchBar'
 import ColorModeIcon from '../components/icons/ColorMode'
-import data from '../data/sets'
+import data from '../data/series'
 
 export default function Sidebar ({ children }) {
   const router = useRouter()
