@@ -3,6 +3,7 @@
 
 import '@testing-library/jest-dom/extend-expect'
 
+// set the default matchMedia. this can be edited with 'setMediaMatches' in testUtils.js
 window.matchMedia = window.matchMedia || function () {
   return {
     matches: false,
