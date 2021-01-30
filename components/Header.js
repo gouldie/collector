@@ -5,6 +5,8 @@ import ColorModeIcon from '../components/icons/ColorMode'
 export default function Header ({ children }) {
   const isDesktop = useBreakpoint('min-widescreen')
 
+  console.log('isDesktop', isDesktop)
+
   return (
     <PageWithHeader sticky header={
       <TopNav>

@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { render, fireEvent, screen } from '@testing-library/react'
 import Sidebar from '../components/Sidebar'
 import { useRouter } from 'next/router'

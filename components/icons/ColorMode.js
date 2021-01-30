@@ -16,6 +16,7 @@ export default function ColorMode () {
     <CustomColorMode
       icon={`solid-${colorMode === 'dark' ? 'sun' : 'moon'}`}
       onClick={() => setColorMode(colorMode === 'dark' ? 'light' : 'dark')}
+      aria-label={colorMode === 'dark' ? 'Light theme' : 'Dark theme'}
     />
   )
 }

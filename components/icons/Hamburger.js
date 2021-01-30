@@ -16,6 +16,7 @@ export default function Hamburger () {
     <CustomHamburger
       icon='solid-bars'
       onClick={sidebar.toggle}
+      aria-label='Menu'
     />
   )
 }
