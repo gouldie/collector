@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import SearchBar from '../components/SearchBar'
 import ColorModeIcon from '../components/icons/ColorMode'
 import data from '../data/series'
+import ClientOnly from '../utils/clientOnly'
 
 export default function Sidebar ({ children }) {
   const router = useRouter()
@@ -26,10 +27,11 @@ export default function Sidebar ({ children }) {
   return (
     <PageWithSidebar collapsedSidebarWidth='260px' sidebar={
       <SideNav selectedId={router.query.set || '/'}>
-        {!isDesktop && <Box style={{ padding: '1rem 1.2rem 0' }}>
-          <ColorModeIcon />
-        </Box>}
-
+        <ClientOnly>
+          {!isDesktop && <Box style={{ padding: '1rem 1.2rem 0' }}>
+            <ColorModeIcon />
+          </Box>}
+        </ClientOnly>
         <SearchBar filter={filter} setFilter={setFilter} />
 
         <SideNav.Level>

@@ -38,7 +38,7 @@ export async function getStaticPaths () {
     paths: validSets.map(set => (
       { params: { set } }
     )),
-    fallback: true
+    fallback: false
   }
 }
 
