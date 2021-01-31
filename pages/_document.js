@@ -24,7 +24,6 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Create Next App</title>
           <link rel='icon' href='/favicon.ico' />
         </Head>
         <body>
