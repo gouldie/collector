@@ -8,6 +8,9 @@ export default {
         body {
           overflow-y: auto !important;
         }
+        .bb-PageWithSidebar {
+          min-height: calc(100vh - 60px);
+        }
         .bb-PageWithSidebarSidebar {
           border-right: none;
         }
