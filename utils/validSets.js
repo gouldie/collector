@@ -1,4 +1,4 @@
-import seriesData from '../data/series'
+import seriesData from 'data/series'
 
 export default seriesData.reduce((accumulator, currentValue) => {
   if (currentValue.sets) {

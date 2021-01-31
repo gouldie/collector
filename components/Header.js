@@ -1,7 +1,7 @@
 import { PageWithHeader, TopNav, useBreakpoint } from 'bumbag'
-import HamburgerIcon from '../components/icons/Hamburger'
-import ColorModeIcon from '../components/icons/ColorMode'
-import ClientOnly from '../utils/clientOnly'
+import HamburgerIcon from 'components/icons/Hamburger'
+import ColorModeIcon from 'components/icons/ColorMode'
+import ClientOnly from 'utils/clientOnly'
 
 export default function Header ({ children }) {
   const isDesktop = useBreakpoint('min-widescreen')

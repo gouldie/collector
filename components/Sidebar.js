@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { SideNav, PageWithSidebar, Box, useBreakpoint } from 'bumbag'
 import { useRouter } from 'next/router'
-import SearchBar from '../components/SearchBar'
-import ColorModeIcon from '../components/icons/ColorMode'
-import data from '../data/series'
-import ClientOnly from '../utils/clientOnly'
+import SearchBar from 'components/SearchBar'
+import ColorModeIcon from 'components/icons/ColorMode'
+import data from 'data/series'
+import ClientOnly from 'utils/clientOnly'
 
 export default function Sidebar ({ children }) {
   const router = useRouter()

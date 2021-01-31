@@ -1,12 +1,13 @@
 import { Box, Text } from 'bumbag'
 import { useRouter } from 'next/router'
-import Card from '../../components/Card'
-import validSets from '../../utils/validSets'
+import Card from 'components/Card'
+import validSets from 'utils/validSets'
 
 export default function Set () {
   const router = useRouter()
   const { set } = router.query
 
+  // This is only used if using 'npm start', not 'npm run export'
   if (!validSets.includes(set)) {
     return (
       <Text.Block style={{ textAlign: 'center' }}>
