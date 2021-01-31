@@ -18,9 +18,9 @@ const FancyInput = applyTheme(Input, {
   }
 })
 
-export default function SearchBar ({ filter, setFilter }) {
+export default function SearchBar ({ filter, setFilter, boxStyle }) {
   return (
-    <CustomBox>
+    <CustomBox style={boxStyle}>
       <FancyInput
         before={<Input.Icon icon='solid-search' />}
         placeholder='Search'

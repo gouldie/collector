@@ -3,7 +3,7 @@ import { Box, applyTheme } from 'bumbag'
 const ContainerBox = applyTheme(Box, {
   styles: {
     base: {
-      padding: '1rem'
+      padding: '1.4rem'
     }
   }
 })
