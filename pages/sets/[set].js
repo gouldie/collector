@@ -22,7 +22,7 @@ export default function Set () {
       <div>{set}</div>
       <Box style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))',
         gridGap: '1rem'
       }}>
         {
