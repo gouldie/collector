@@ -45,6 +45,7 @@ export default {
     },
     styles: {
       base: {
+        borderRight: '1px solid var(--bb-palette-white800)',
         minHeight: '100%',
         '::-webkit-scrollbar': {
           display: 'none'
