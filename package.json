@@ -17,6 +17,7 @@
     "next": "^10.0.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-flip-move": "^3.0.4",
     "serve": "^11.3.2"
   },
   "devDependencies": {
