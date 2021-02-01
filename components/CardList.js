@@ -1,8 +1,7 @@
 import { Box } from 'bumbag'
 import Card from 'components/Card'
 
-export default function CardList ({ cards, filter }) {
-  const filteredCards = cards.filter(e => e.name.toLowerCase().includes(filter.toLowerCase()))
+export default function CardList ({ cards }) {
   return (
     <Box style={{
       display: 'grid',
@@ -10,7 +9,7 @@ export default function CardList ({ cards, filter }) {
       gridGap: '1rem'
     }}>
       {
-        filteredCards.map((card, i) => <Card key={i} {...card} />)
+        cards.map((card, i) => <Card key={i} {...card} />)
       }
     </Box>
   )

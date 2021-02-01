@@ -24,7 +24,8 @@ export default function Set () {
 
   const setData = require('../../data/sets/' + set).default || {}
 
-  const sortedCards = setData.cards.sort(sortBy[sort])
+  const filteredCards = setData.cards.filter(e => e.name.toLowerCase().includes(filter.toLowerCase()))
+  const sortedCards = filteredCards.cards.sort(sortBy[sort])
 
   return (
     <Box>
@@ -35,7 +36,7 @@ export default function Set () {
         sort={sort}
         setSort={setSort}
       />
-      <CardList cards={sortedCards} filter={filter} />
+      <CardList cards={sortedCards} />
     </Box>
   )
 }
