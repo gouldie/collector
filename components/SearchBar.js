@@ -13,7 +13,7 @@ const FancyInput = applyTheme(Input, {
   styles: {
     base: {
       fontSize: '0.875rem',
-      height: '2.75em'
+      height: '2.4rem'
     }
   }
 })

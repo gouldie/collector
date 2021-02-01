@@ -1,7 +1,7 @@
 import { Box } from 'bumbag'
 import Card from 'components/Card'
 
-export default function SetCardList ({ cards, filter }) {
+export default function CardList ({ cards, filter }) {
   const filteredCards = cards.filter(e => e.name.toLowerCase().includes(filter.toLowerCase()))
   return (
     <Box style={{
