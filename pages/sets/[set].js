@@ -25,7 +25,7 @@ export default function Set () {
   const setData = require('../../data/sets/' + set).default || {}
 
   const filteredCards = setData.cards.filter(e => e.name.toLowerCase().includes(filter.toLowerCase()))
-  const sortedCards = filteredCards.cards.sort(sortBy[sort])
+  const sortedCards = filteredCards.sort(sortBy[sort])
 
   return (
     <Box>
