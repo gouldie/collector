@@ -1,16 +1,19 @@
-import { Box, Heading } from 'bumbag'
+import { Box, Heading, useBreakpoint } from 'bumbag'
 import SearchBar from 'components/SearchBar'
 import Select from 'components/Select'
 
 export default function SetHeader ({ setName, filter, setFilter, sort, setSort }) {
+  const isDesktop = useBreakpoint('min-widescreen')
+
   return (
     <Box style={{
       marginBottom: '20px',
-      display: 'flex',
+      display: isDesktop ? 'center' : 'flex-start',
       alignItems: 'center',
-      justifyContent: 'space-between'
+      justifyContent: 'space-between',
+      flexDirection: isDesktop ? 'row' : 'column'
     }}>
-        <Heading use='h5'>
+        <Heading use='h5' style={{ marginBottom: !isDesktop && '20px' }}>
           {setName}
         </Heading>
 
