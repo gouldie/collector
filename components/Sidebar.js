@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { SideNav, PageWithSidebar, Box, useBreakpoint, usePage } from 'bumbag'
+import { SideNav, PageWithSidebar, useBreakpoint, usePage } from 'bumbag'
 import { useRouter } from 'next/router'
 import SearchBar from 'components/SearchBar'
-import ColorModeIcon from 'components/icons/ColorMode'
+import SidebarIcons from 'components/SidebarIcons'
 import data from 'data/series'
 import ClientOnly from 'utils/clientOnly'
 
@@ -28,12 +28,12 @@ export default function Sidebar ({ children }) {
   return (
     <PageWithSidebar collapsedSidebarWidth='260px' sidebar={
       <SideNav selectedId={router.query.set || '/'}>
+        {!isDesktop &&
         <ClientOnly>
-          {!isDesktop && <Box style={{ padding: '1rem 1.2rem 0' }}>
-            <ColorModeIcon />
-          </Box>}
-        </ClientOnly>
-        <SearchBar filter={filter} setFilter={setFilter} />
+          <SidebarIcons />
+        </ClientOnly>}
+
+        {isDesktop && <SearchBar filter={filter} setFilter={setFilter} />}
 
         <SideNav.Level>
           <SideNav.Item navId='/' onClick={() => {
