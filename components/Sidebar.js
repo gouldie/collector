@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { SideNav, PageWithSidebar, Box, useBreakpoint } from 'bumbag'
+import { SideNav, PageWithSidebar, Box, useBreakpoint, usePage } from 'bumbag'
 import { useRouter } from 'next/router'
 import SearchBar from 'components/SearchBar'
 import ColorModeIcon from 'components/icons/ColorMode'
@@ -8,6 +8,7 @@ import ClientOnly from 'utils/clientOnly'
 
 export default function Sidebar ({ children }) {
   const router = useRouter()
+  const { sidebar } = usePage()
   const isDesktop = useBreakpoint('min-widescreen')
   const [filter, setFilter] = useState('')
 
@@ -35,7 +36,11 @@ export default function Sidebar ({ children }) {
         <SearchBar filter={filter} setFilter={setFilter} />
 
         <SideNav.Level>
-          <SideNav.Item navId='/' onClick={() => { router.push('/') }}>Home</SideNav.Item>
+          <SideNav.Item navId='/' onClick={() => {
+            router.push('/').then(() => {
+              if (!isDesktop) sidebar.toggle()
+            })
+          }}>Home</SideNav.Item>
         </SideNav.Level>
 
         {
@@ -43,7 +48,11 @@ export default function Sidebar ({ children }) {
             <SideNav.Level key={series.title} title={series.title}>
               {
                 series.sets.map(set => (
-                  <SideNav.Item key={set.id} navId={set.id} onClick={() => { router.push(`/sets/${set.id}`) }}>{set.name}</SideNav.Item>
+                  <SideNav.Item key={set.id} navId={set.id} onClick={() => {
+                    router.push(`/sets/${set.id}`).then(() => {
+                      if (!isDesktop) sidebar.toggle()
+                    })
+                  }}>{set.name}</SideNav.Item>
                 ))
               }
             </SideNav.Level>
