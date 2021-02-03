@@ -8,9 +8,9 @@ export default function SetHeader ({ setName, filter, setFilter, sort, setSort }
   return (
     <Box style={{
       marginBottom: '20px',
-      display: isDesktop ? 'center' : 'flex-start',
-      alignItems: 'center',
+      display: 'flex',
       justifyContent: 'space-between',
+      alignItems: isDesktop ? 'center' : 'flex-start',
       flexDirection: isDesktop ? 'row' : 'column'
     }}>
         <Heading use='h5' style={{ marginBottom: !isDesktop && '20px' }}>
