@@ -2,6 +2,7 @@ import { PageWithHeader, TopNav, useBreakpoint } from 'bumbag'
 import HamburgerIcon from 'components/icons/Hamburger'
 import ColorModeIcon from 'components/icons/ColorMode'
 import ClientOnly from 'utils/clientOnly'
+import { cloneElement } from 'react'
 
 export default function Header ({ children }) {
   const isDesktop = useBreakpoint('min-widescreen')
@@ -22,7 +23,7 @@ export default function Header ({ children }) {
         </TopNav.Section>
       </TopNav>
     }>
-      {children}
+      {cloneElement(children, { isDesktop })}
     </PageWithHeader>
   )
 }

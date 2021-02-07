@@ -1,15 +1,14 @@
 import { useState } from 'react'
-import { SideNav, PageWithSidebar, useBreakpoint, usePage } from 'bumbag'
+import { SideNav, PageWithSidebar, usePage } from 'bumbag'
 import { useRouter } from 'next/router'
 import SearchBar from 'components/SearchBar'
 import SidebarIcons from 'components/SidebarIcons'
 import data from 'data/series'
 import ClientOnly from 'utils/clientOnly'
 
-export default function Sidebar ({ children }) {
+export default function Sidebar ({ children, isDesktop }) {
   const router = useRouter()
   const { sidebar } = usePage()
-  const isDesktop = useBreakpoint('min-widescreen')
   const [filter, setFilter] = useState('')
 
   const filteredData = data.reduce((accumulator, currentValue) => {
