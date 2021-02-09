@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-import { Box } from 'bumbag'
+import { Box, Modal, Card } from 'bumbag'
 import SetHeader from 'components/SetHeader'
 import CardList from 'components/CardList'
 import validSets from 'utils/validSets'
@@ -10,7 +10,6 @@ export default function Set () {
   const router = useRouter()
   const [filter, setFilter] = useState('')
   const [sort, setSort] = useState('no')
-
   const { set } = router.query
 
   // This is only used if using 'npm start', not 'npm run export'
@@ -36,7 +35,10 @@ export default function Set () {
         sort={sort}
         setSort={setSort}
       />
-      <CardList cards={sortedCards} />
+      <Modal.State>
+        <CardList cards={sortedCards} />
+      </Modal.State>
+
     </Box>
   )
 }
