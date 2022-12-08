@@ -1,9 +1,10 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 import { extractCritical } from 'bumbag-server'
 import { InitializeColorMode } from 'bumbag'
+import { ColorModeScript } from '@chakra-ui/react'
 
 export default class MyDocument extends Document {
-  static async getInitialProps (ctx) {
+  static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx)
     const styles = extractCritical(initialProps.html)
     return {
@@ -20,7 +21,7 @@ export default class MyDocument extends Document {
     }
   }
 
-  render () {
+  render() {
     return (
       <Html>
         <Head>
@@ -28,6 +29,7 @@ export default class MyDocument extends Document {
         </Head>
         <body>
           <InitializeColorMode />
+          <ColorModeScript initialColorMode='system' />
           <Main />
           <NextScript />
         </body>
