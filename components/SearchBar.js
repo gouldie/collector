@@ -1,33 +1,23 @@
-import { applyTheme, Box, Input } from 'bumbag'
+import { Box, Input, InputGroup, InputLeftElement } from '@chakra-ui/react'
+import { FiSearch } from 'react-icons/fi'
 
-const CustomBox = applyTheme(Box, {
-  styles: {
-    base: {
-      fontSize: '0.875rem',
-      padding: '1rem'
-    }
-  }
-})
-
-const FancyInput = applyTheme(Input, {
-  styles: {
-    base: {
-      fontSize: '0.875rem',
-      height: '2.4rem'
-    }
-  }
-})
-
-export default function SearchBar ({ filter, setFilter, boxStyle }) {
+export default function SearchBar({ filter, setFilter, boxStyle }) {
   return (
-    <CustomBox style={boxStyle}>
-      <FancyInput
-        before={<Input.Icon icon='solid-search' />}
-        placeholder='Search'
-        value={filter}
-        role='searchbox'
-        onChange={e => setFilter(e.target.value)}
-      />
-    </CustomBox>
+    <Box padding='1rem'>
+      <InputGroup>
+        <InputLeftElement pointerEvents='none'>
+          <FiSearch />
+        </InputLeftElement>
+        <Input
+          fontSize='0.875rem'
+          height='2.4rem'
+          before={<p>test</p>}
+          placeholder='Search'
+          value={filter}
+          role='searchbox'
+          onChange={e => setFilter(e.target.value)}
+        />
+      </InputGroup>
+    </Box>
   )
 }

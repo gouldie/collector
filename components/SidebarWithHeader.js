@@ -16,6 +16,8 @@ import { FiMenu } from 'react-icons/fi'
 import ColorModeIcon from 'components/icons/ColorMode'
 import data from 'data/series'
 import { useRouter } from 'next/router'
+import SearchBar from 'components/SearchBar'
+import ClientOnly from 'utils/clientOnly'
 
 export default function SidebarWithHeader({ children }) {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -82,10 +84,14 @@ const SidebarContent = ({ onClose, ...rest }) => {
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
 
+      <SearchBar filter={filter} setFilter={setFilter} />
+
       {filteredData.map(series => (
-        <Box key={series.name} p='0 1.25rem'>
+        <Box key={series.title}>
           <NavItem
-            mb='30px'
+            mb='25px'
+            p='0.3rem 1.25rem'
+            isSelected={router.asPath === '/'}
             onClick={() => {
               router.push(`/`).then(() => {
                 onClose()
@@ -101,6 +107,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
             textTransform='uppercase'
             color={useColorModeValue('#727d90', '#727d90')}
             mb='0.5rem'
+            p='0.3rem 1.25rem'
           >
             {series.title}
           </Text>
@@ -108,6 +115,8 @@ const SidebarContent = ({ onClose, ...rest }) => {
           {series.sets.map(set => (
             <NavItem
               key={set.id}
+              p='0.3rem 1.25rem'
+              isSelected={router.asPath === `/sets/${set.id}`}
               onClick={() => {
                 router.push(`/sets/${set.id}`).then(() => {
                   onClose()
@@ -123,11 +132,16 @@ const SidebarContent = ({ onClose, ...rest }) => {
   )
 }
 
-const NavItem = ({ icon, children, ...rest }) => {
+const NavItem = ({ isSelected, children, ...rest }) => {
+  const selectedStyles = {
+    color: useColorModeValue('#574feb', '#c1c9d7'),
+    backgroundColor: useColorModeValue('#eeedfd', '#262a53'),
+    boxShadow: `inset 3px 0 0 0 ${useColorModeValue('#574feb', '#574feb')}`
+  }
+
   return (
     <Link href='#' style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
       <Text
-        mb='0.45rem'
         fontSize='0.875rem'
         cursor='pointer'
         color={useColorModeValue('#474747', '#c1c9d7')}
@@ -135,6 +149,7 @@ const NavItem = ({ icon, children, ...rest }) => {
           color: useColorModeValue('#574feb', '#8984f1')
         }}
         {...rest}
+        sx={{ ...(isSelected ? selectedStyles : {}) }}
       >
         {children}
       </Text>
@@ -173,7 +188,9 @@ const MobileNav = ({ onOpen, ...rest }) => {
       </Text>
 
       <HStack spacing={{ base: '0', md: '6' }} mr='5px'>
-        <ColorModeIcon />
+        <ClientOnly>
+          <ColorModeIcon />
+        </ClientOnly>
       </HStack>
     </Flex>
   )
