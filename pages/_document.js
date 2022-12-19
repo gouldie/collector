@@ -1,34 +1,16 @@
-import Document, { Head, Html, Main, NextScript } from 'next/document'
-import { extractCritical } from 'bumbag-server'
-import { InitializeColorMode } from 'bumbag'
 import { ColorModeScript } from '@chakra-ui/react'
+import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
 
-export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx)
-    const styles = extractCritical(initialProps.html)
-    return {
-      ...initialProps,
-      styles: (
-        <>
-          {initialProps.styles}
-          <style
-            data-emotion-css={styles.ids.join(' ')}
-            dangerouslySetInnerHTML={{ __html: styles.css }}
-          />
-        </>
-      )
-    }
-  }
-
+export default class Document extends NextDocument {
   render() {
     return (
-      <Html>
+      <Html lang='en'>
         <Head>
           <link rel='icon' href='/favicon.ico' />
         </Head>
+
         <body>
-          <InitializeColorMode />
+          {/* 👇 Here's the script */}
           <ColorModeScript initialColorMode='system' />
           <Main />
           <NextScript />

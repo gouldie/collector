@@ -1,18 +1,12 @@
 import { render, fireEvent, screen } from '@testing-library/react'
 import Header from '../components/Header'
-// import { Provider as BumbagProvider } from 'bumbag'
-// import theme from '../data/theme'
 import { setMediaMatches } from '../testUtils'
 
 describe('header icons', () => {
   test('theme toggle works', () => {
     setMediaMatches(true)
 
-    render(
-      // <BumbagProvider theme={theme}>
-      <Header />
-      // </BumbagProvider>
-    )
+    render(<Header />)
 
     const icon = screen.getByRole('img', { name: /theme/i })
 

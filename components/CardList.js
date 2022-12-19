@@ -17,7 +17,8 @@ export default function CardList({ cards }) {
       style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))',
-        gridGap: '1rem'
+        gridGap: '1rem',
+        position: 'relative' // stop react-flip-move giving warning about static parent
       }}
     >
       <FlipMove typeName={null} duration={300}>

@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-import { Box, Modal } from 'bumbag'
+import { Box } from '@chakra-ui/react'
 import SetHeader from 'components/SetHeader'
 import CardList from 'components/CardList'
 // import validSets from 'utils/validSets'
@@ -37,22 +37,10 @@ export default function Set() {
         sort={sort}
         setSort={setSort}
       />
-      <Modal.State>
-        <CardList cards={sortedCards} />
-      </Modal.State>
+
+      <CardList cards={sortedCards} />
     </Box>
   )
 }
-
-// export async function getStaticPaths() {
-//   return {
-//     paths: validSets.map(set => ({ params: { set } })),
-//     fallback: false
-//   }
-// }
-
-// export async function getStaticProps() {
-//   return { props: {} }
-// }
 
 export { getServerSideProps } from '../Chakra'
