@@ -3,7 +3,7 @@ import SearchBar from 'components/SearchBar'
 import Select from 'components/Select'
 
 export default function SetHeader({ setName, filter, setFilter, sort, setSort }) {
-  const [isLargerThan800] = useMediaQuery('(min-width: 800px)')
+  const [isDesktop] = useMediaQuery('(min-width: 1000px)')
 
   return (
     <Box
@@ -11,11 +11,11 @@ export default function SetHeader({ setName, filter, setFilter, sort, setSort })
         marginBottom: '20px',
         display: 'flex',
         justifyContent: 'space-between',
-        alignItems: isLargerThan800 ? 'center' : 'flex-start',
-        flexDirection: isLargerThan800 ? 'row' : 'column'
+        alignItems: isDesktop ? 'center' : 'flex-start',
+        flexDirection: isDesktop ? 'row' : 'column'
       }}
     >
-      <Heading use='h5' style={{ marginBottom: !isLargerThan800 && '20px' }}>
+      <Heading use='h5' style={{ marginBottom: !isDesktop && '20px' }}>
         {setName}
       </Heading>
 
