@@ -1,7 +1,7 @@
 import { render, fireEvent, screen } from '@testing-library/react'
 import Header from '../components/Header'
-import { Provider as BumbagProvider } from 'bumbag'
-import theme from '../data/theme'
+// import { Provider as BumbagProvider } from 'bumbag'
+// import theme from '../data/theme'
 import { setMediaMatches } from '../testUtils'
 
 describe('header icons', () => {
@@ -9,9 +9,9 @@ describe('header icons', () => {
     setMediaMatches(true)
 
     render(
-      <BumbagProvider theme={theme}>
-        <Header />
-      </BumbagProvider>
+      // <BumbagProvider theme={theme}>
+      <Header />
+      // </BumbagProvider>
     )
 
     const icon = screen.getByRole('img', { name: /theme/i })

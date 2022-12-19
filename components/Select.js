@@ -1,23 +1,21 @@
-import { Select as BumbagSelect, applyTheme } from 'bumbag'
+import { Select as ChakraSelect } from '@chakra-ui/react'
 
-const CustomSelect = applyTheme(BumbagSelect, {
-  styles: {
-    base: {
-      // fontSize: '0.875rem',
-      // height: '2.4rem'
-    }
-  }
-})
-
-export default function Select ({ sort, setSort, options, style = {} }) {
+function Select({ sort, setSort, options }) {
   return (
-    <CustomSelect
-      size='small'
+    <ChakraSelect
+      size='sm'
       value={sort}
       onChange={e => setSort(e.target.value)}
-      options={options}
-      style={{ minWidth: '140px', ...style }}
-      // placeholder='Sort by'
-    />
+      minWidth='140px'
+      borderRadius='5px'
+    >
+      {options.map(option => (
+        <option key={option.value} value={option.value}>
+          {option.label}
+        </option>
+      ))}
+    </ChakraSelect>
   )
 }
+
+export default Select

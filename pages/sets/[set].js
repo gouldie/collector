@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Box, Modal } from 'bumbag'
 import SetHeader from 'components/SetHeader'
 import CardList from 'components/CardList'
-import validSets from 'utils/validSets'
+// import validSets from 'utils/validSets'
 import sortBy from 'utils/sort'
 
 export default function Set() {

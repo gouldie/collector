@@ -1,17 +1,5 @@
-import { Box, applyTheme } from 'bumbag'
+import { Box } from '@chakra-ui/react'
 
-const ContainerBox = applyTheme(Box, {
-  styles: {
-    base: {
-      padding: '1.4rem'
-    }
-  }
-})
-
-export default function Container ({ children }) {
-  return (
-    <ContainerBox>
-      {children}
-    </ContainerBox>
-  )
+export default function Container({ children }) {
+  return <Box p='1.4rem'>{children}</Box>
 }

@@ -1,23 +1,17 @@
 import { forwardRef } from 'react'
-import { applyTheme, Box, Image } from 'bumbag'
+import { Box, Image } from '@chakra-ui/react'
 
-const CustomBox = applyTheme(Box, {
-  styles: {
-    base: {
-      cursor: 'pointer',
-      borderRadius: '5px',
-      ':hover': {
-        boxShadow: '0 0 5px #ddd'
-      }
-    }
-  }
-})
-
-function Card ({ name, image, onClick }, ref) {
+function Card({ name, image, onClick }, ref) {
   return (
-    <CustomBox ref={ref} onClick={() => onClick(image)}>
+    <Box
+      ref={ref}
+      onClick={() => onClick(image)}
+      cursor='pointer'
+      borderRadius='5px'
+      _hover={{ boxShadow: '0 0 5px #ddd' }}
+    >
       <Image src={image} alt='Pokemon' style={{ width: '100%', display: 'block' }} />
-    </CustomBox>
+    </Box>
   )
 }
 

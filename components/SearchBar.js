@@ -4,14 +4,15 @@ import { FiSearch } from 'react-icons/fi'
 export default function SearchBar({ filter, setFilter, boxStyle }) {
   return (
     <Box padding='1rem'>
-      <InputGroup>
+      <InputGroup size='sm'>
         <InputLeftElement pointerEvents='none'>
           <FiSearch />
         </InputLeftElement>
+
         <Input
+          size='sm'
           fontSize='0.875rem'
-          height='2.4rem'
-          before={<p>test</p>}
+          borderRadius='5px'
           placeholder='Search'
           value={filter}
           role='searchbox'
