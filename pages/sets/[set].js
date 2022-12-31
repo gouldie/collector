@@ -3,8 +3,8 @@ import { useState } from 'react'
 import { Box } from '@chakra-ui/react'
 import SetHeader from 'components/SetHeader'
 import CardList from 'components/CardList'
+import ClientOnly from 'utils/clientOnly'
 // import validSets from 'utils/validSets'
-import sortBy from 'utils/sort'
 
 export default function Set() {
   const router = useRouter()
@@ -23,11 +23,6 @@ export default function Set() {
 
   const setData = require('../../data/sets/' + set).default || {}
 
-  const filteredCards = setData.cards.filter(e =>
-    e.name.toLowerCase().includes(filter.toLowerCase())
-  )
-  const sortedCards = filteredCards.sort(sortBy[sort])
-
   return (
     <Box>
       <SetHeader
@@ -38,7 +33,9 @@ export default function Set() {
         setSort={setSort}
       />
 
-      <CardList cards={sortedCards} />
+      <ClientOnly>
+        <CardList set={set} cards={setData.cards} filter={filter} sort={sort} />
+      </ClientOnly>
     </Box>
   )
 }
