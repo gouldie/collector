@@ -1,18 +1,22 @@
+import baseSet from './sets/base-set'
+import jungle from './sets/jungle'
+import fossil from './sets/fossil'
+
 export default [
   {
     title: 'Base Set Series',
     sets: [
       {
-        name: 'Base Set',
-        id: 'base-set'
+        id: 'base-set',
+        ...baseSet
       },
       {
-        name: 'Jungle',
-        id: 'jungle'
+        id: 'jungle',
+        ...jungle
       },
       {
-        name: 'Fossil',
-        id: 'fossil'
+        id: 'fossil',
+        ...fossil
       }
     ]
   }
