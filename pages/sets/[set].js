@@ -34,7 +34,7 @@ export default function Set() {
       />
 
       <ClientOnly>
-        <CardList set={set} cards={setData.cards} filter={filter} sort={sort} />
+        <CardList key={set} set={set} cards={setData.cards} filter={filter} sort={sort} />
       </ClientOnly>
     </Box>
   )
