@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <Box>
       <Heading use='h5' mt='10px' mb='20px'>
-        My progress
+        Home
       </Heading>
 
       <ClientOnly>
@@ -19,23 +19,31 @@ export default function Home() {
               {series.title}
             </Text>
 
-            {series.sets.map(set => (
-              <Box key={set.name} mb='6px'>
-                <Text fontSize='sm' width='150px' mb='5px'>
-                  {set.name}
-                </Text>
+            {series.sets.map(set => {
+              const totalCards = Object.keys(set.cards).length
+              const collectedCards = Object.values(collected[set.id]).filter(Boolean).length
 
-                <Progress
-                  hasStripe
-                  value={
-                    (Object.values(collected[set.id]).filter(Boolean).length /
-                      Object.keys(set.cards).length) *
-                    100
-                  }
-                  width='150px'
-                />
-              </Box>
-            ))}
+              return (
+                <Box key={set.name} mb='6px'>
+                  <Text fontSize='sm' width='150px' mb='5px'>
+                    {set.name}
+                  </Text>
+
+                  <Box display='flex' alignItems='center'>
+                    <Progress
+                      hasStripe
+                      value={(collectedCards / totalCards) * 100}
+                      width='150px'
+                      mr='10px'
+                    />
+
+                    <Text fontSize='sm' position='relative' top='-2px'>
+                      {collectedCards}/{totalCards}
+                    </Text>
+                  </Box>
+                </Box>
+              )
+            })}
           </Box>
         ))}
       </ClientOnly>
