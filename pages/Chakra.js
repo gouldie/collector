@@ -1,6 +1,6 @@
 import { ChakraProvider, cookieStorageManagerSSR, localStorageManager } from '@chakra-ui/react'
 
-export function Chakra({ cookies, children }) {
+export default function Chakra({ cookies, children }) {
   const colorModeManager =
     typeof cookies === 'string' ? cookieStorageManagerSSR(cookies) : localStorageManager
 

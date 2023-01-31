@@ -2,7 +2,7 @@ import NextApp from 'next/app'
 import Head from 'next/head'
 import Container from 'components/Container'
 import SidebarWithHeader from 'components/SidebarWithHeader'
-import { Chakra } from './Chakra'
+import Chakra from './Chakra'
 
 export default class App extends NextApp {
   render() {
