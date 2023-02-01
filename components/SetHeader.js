@@ -1,19 +1,15 @@
-import { Box, Heading, useMediaQuery } from '@chakra-ui/react'
+import { Box, Heading } from '@chakra-ui/react'
 import SearchBar from 'components/SearchBar'
 import Select from 'components/Select'
 
-export default function SetHeader({ setName, filter, setFilter, sort, setSort }) {
-  const [isDesktop] = useMediaQuery('(min-width: 1000px)')
-
+export default function SetHeader({ isDesktop, setName, filter, setFilter, sort, setSort }) {
   return (
     <Box
-      style={{
-        marginBottom: '20px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: isDesktop ? 'center' : 'flex-start',
-        flexDirection: isDesktop ? 'row' : 'column'
-      }}
+      mb='20px'
+      display='flex'
+      justifyContent='space-between'
+      alignItems={isDesktop ? 'center' : 'flex-start'}
+      flexDirection={isDesktop ? 'row' : 'column'}
     >
       <Heading use='h5' style={{ marginBottom: !isDesktop && '20px' }}>
         {setName}

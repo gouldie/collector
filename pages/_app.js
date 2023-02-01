@@ -1,27 +1,25 @@
-import NextApp from 'next/app'
 import Head from 'next/head'
 import Container from 'components/Container'
 import SidebarWithHeader from 'components/SidebarWithHeader'
 import Chakra from './Chakra'
+import { useMediaQuery } from '@chakra-ui/react'
 
-export default class App extends NextApp {
-  render() {
-    const { Component, pageProps } = this.props
+export default function App({ Component, pageProps }) {
+  const [isDesktop] = useMediaQuery('(min-width: 1000px)')
 
-    return (
-      <>
-        <Head>
-          <title>Collector</title>
-        </Head>
+  return (
+    <>
+      <Head>
+        <title>Collector</title>
+      </Head>
 
-        <Chakra cookies={pageProps.cookies}>
-          <SidebarWithHeader>
-            <Container {...pageProps}>
-              <Component />
-            </Container>
-          </SidebarWithHeader>
-        </Chakra>
-      </>
-    )
-  }
+      <Chakra cookies={pageProps.cookies}>
+        <SidebarWithHeader>
+          <Container {...pageProps}>
+            <Component isDesktop={isDesktop} />
+          </Container>
+        </SidebarWithHeader>
+      </Chakra>
+    </>
+  )
 }
