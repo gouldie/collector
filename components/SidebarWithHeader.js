@@ -6,7 +6,6 @@ import {
   Flex,
   HStack,
   useColorModeValue,
-  Link,
   Drawer,
   DrawerContent,
   Text,
@@ -18,6 +17,7 @@ import data from 'data/series'
 import { useRouter } from 'next/router'
 import SearchBar from 'components/SearchBar'
 import ClientOnly from 'utils/clientOnly'
+import Link from 'next/link'
 
 export default function SidebarWithHeader({ children }) {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -87,16 +87,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
 
       {filteredData.map(series => (
         <Box key={series.title}>
-          <NavItem
-            mb='25px'
-            p='0.3rem 1.25rem'
-            isSelected={router.asPath === '/'}
-            onClick={() => {
-              router.push(`/`).then(() => {
-                onClose()
-              })
-            }}
-          >
+          <NavItem mb='25px' p='0.3rem 1.25rem' isSelected={router.asPath === '/'} href='/'>
             Home
           </NavItem>
 
@@ -116,11 +107,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
               key={set.id}
               p='0.3rem 1.25rem'
               isSelected={router.asPath === `/sets/${set.id}`}
-              onClick={() => {
-                router.push(`/sets/${set.id}`).then(() => {
-                  onClose()
-                })
-              }}
+              href={`/sets/${set.id}`}
             >
               {set.name}
             </NavItem>
@@ -131,7 +118,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
   )
 }
 
-const NavItem = ({ isSelected, children, ...rest }) => {
+const NavItem = ({ isSelected, children, href, ...rest }) => {
   const selectedStyles = {
     color: useColorModeValue('#574feb', '#c1c9d7'),
     backgroundColor: useColorModeValue('#eeedfd', '#262a53'),
@@ -139,7 +126,7 @@ const NavItem = ({ isSelected, children, ...rest }) => {
   }
 
   return (
-    <Link href='#' style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
+    <Link href={href} style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
       <Text
         fontSize='0.875rem'
         cursor='pointer'
