@@ -35,7 +35,7 @@ export default function CardList({ set, cards, filter, sort }) {
       <FlipMove typeName={null} duration={300}>
         {sortedCards.map((card, i) => (
           <Card
-            key={card.name}
+            key={card.image}
             set={set}
             {...card}
             isCollected={!!collected[set][card.no]}
