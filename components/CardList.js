@@ -12,13 +12,14 @@ import {
 import Card from 'components/Card'
 import sortBy from 'utils/sort'
 import useCollected from 'hooks/useCollected'
+import { S3_URL } from '@globals'
 
 export default function CardList({ set, cards, filter, sort }) {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [selected, setSelected] = useState()
   const { collected, collectCard } = useCollected()
 
-  const cardList = Object.entries(cards).map(([key, value]) => ({ no: key, ...value }))
+  const cardList = Object.entries(cards).map(([key, value]) => ({ no: Number(key), ...value }))
   const filteredCards = cardList.filter(e => e.name.toLowerCase().includes(filter.toLowerCase()))
   const sortedCards = filteredCards.sort(sortBy[sort])
 
@@ -35,6 +36,7 @@ export default function CardList({ set, cards, filter, sort }) {
         {sortedCards.map((card, i) => (
           <Card
             key={card.name}
+            set={set}
             {...card}
             isCollected={!!collected[set][card.no]}
             onClick={() => {
@@ -48,7 +50,7 @@ export default function CardList({ set, cards, filter, sort }) {
       <Modal isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
         <ModalContent width='fit-content' background='none'>
-          <Image src={selected?.image} objectFit='contain' maxWidth='300px' />
+          <Image src={`${S3_URL}/${set}/${selected?.image}`} objectFit='contain' maxWidth='300px' />
 
           <Button
             colorScheme={collected[set][selected?.no] ? 'green' : 'red'}

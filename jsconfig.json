@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "paths": {
+      "@globals": ["globals"]
+    }
   },
   "exclude": [
     "node_modules",
