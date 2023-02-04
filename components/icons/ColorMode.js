@@ -1,8 +1,8 @@
-import { IconButton, useColorMode as chakUseColorMode } from '@chakra-ui/react'
+import { IconButton, useColorMode } from '@chakra-ui/react'
 import { FiSun, FiMoon } from 'react-icons/fi'
 
 export default function ColorMode({ style }) {
-  const { colorMode, setColorMode } = chakUseColorMode()
+  const { colorMode, setColorMode } = useColorMode()
 
   return (
     <IconButton

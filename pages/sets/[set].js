@@ -22,7 +22,7 @@ export default function Set({ isDesktop }) {
   return (
     <Box>
       <SetHeader
-        setName={setData.name}
+        setData={setData}
         filter={filter}
         isDesktop={isDesktop}
         setFilter={setFilter}

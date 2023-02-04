@@ -1,36 +1,71 @@
-import { Box, Heading } from '@chakra-ui/react'
+import { Box, Heading, Image, Text, useColorMode } from '@chakra-ui/react'
+import { S3_URL } from '@globals'
 import SearchBar from 'components/SearchBar'
 import Select from 'components/Select'
 
-export default function SetHeader({ isDesktop, setName, filter, setFilter, sort, setSort }) {
+function Tag({ tag, sx = {} }) {
+  const { colorMode } = useColorMode()
+
   return (
-    <Box
-      mb='20px'
-      display='flex'
-      justifyContent='space-between'
-      alignItems={isDesktop ? 'center' : 'flex-start'}
-      flexDirection={isDesktop ? 'row' : 'column'}
+    <Text
+      sx={{
+        backgroundColor: colorMode === 'dark' ? '#374151' : '#d1d5db',
+        fontWeight: 500,
+        fontSize: '0.875rem',
+        lineHeight: '1.25rem',
+        py: '0.125rem',
+        px: '0.625rem',
+        borderRadius: '0.25rem',
+        ...sx
+      }}
     >
-      <Heading use='h5' style={{ marginBottom: !isDesktop && '20px' }}>
-        {setName}
-      </Heading>
+      {tag}
+    </Text>
+  )
+}
 
-      <Box display='flex' alignItems='center'>
-        <Select
-          sort={sort}
-          setSort={setSort}
-          options={[
-            { label: 'Card no.', value: 'no' },
-            { label: 'Name', value: 'name' }
-          ]}
-        />
+export default function SetHeader({ isDesktop, setData, filter, setFilter, sort, setSort }) {
+  const { name, image, released, cards } = setData
 
-        <SearchBar
-          boxStyle={{ padding: 0, marginLeft: '20px' }}
-          filter={filter}
-          setFilter={setFilter}
-        />
+  return (
+    <>
+      <Box
+        mb='20px'
+        display='flex'
+        justifyContent='space-between'
+        alignItems={isDesktop ? 'center' : 'flex-start'}
+        flexDirection={isDesktop ? 'row' : 'column'}
+      >
+        <Box display='flex'>
+          <Image src={`${S3_URL}/logos/${image}`} alt='Pokemon' style={{ maxHeight: '40px' }} />
+
+          <Heading as='h1' size='lg' sx={{ ml: '25px', mb: !isDesktop && '20px' }}>
+            {name}
+          </Heading>
+        </Box>
+
+        <Box display='flex' alignItems='center'>
+          <Select
+            sort={sort}
+            setSort={setSort}
+            options={[
+              { label: 'Card no.', value: 'no' },
+              { label: 'Name', value: 'name' }
+            ]}
+          />
+
+          <SearchBar
+            boxStyle={{ padding: 0, marginLeft: '20px' }}
+            filter={filter}
+            setFilter={setFilter}
+          />
+        </Box>
       </Box>
-    </Box>
+
+      <Box display='flex' mb='20px'>
+        <Tag tag={`Cards: ${Object.keys(cards).length}`} sx={{ mr: '20px' }} />
+        <Tag tag={`Released: ${released}`} />
+      </Box>
+    </>
   )
 }

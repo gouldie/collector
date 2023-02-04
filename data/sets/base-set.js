@@ -1,5 +1,7 @@
 export default {
   name: 'Base Set',
+  image: 'base-set.png',
+  released: 'Jan 9th 1999',
   cards: {
     1: {
       name: 'Alakazam',

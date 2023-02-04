@@ -1,5 +1,7 @@
 export default {
   name: 'Fossil',
+  image: 'fossil.png',
+  released: 'Oct 10th 1999',
   cards: {
     1: {
       name: 'Aerodactyl',
