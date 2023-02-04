@@ -87,7 +87,13 @@ const SidebarContent = ({ onClose, ...rest }) => {
 
       {filteredData.map(series => (
         <Box key={series.title}>
-          <NavItem mb='25px' p='0.3rem 1.25rem' isSelected={router.asPath === '/'} href='/'>
+          <NavItem
+            mb='25px'
+            p='0.3rem 1.25rem'
+            isSelected={router.asPath === '/'}
+            href='/'
+            onClose={onClose}
+          >
             Home
           </NavItem>
 
@@ -108,6 +114,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
               p='0.3rem 1.25rem'
               isSelected={router.asPath === `/sets/${set.id}`}
               href={`/sets/${set.id}`}
+              onClose={onClose}
             >
               {set.name}
             </NavItem>
@@ -118,7 +125,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
   )
 }
 
-const NavItem = ({ isSelected, children, href, ...rest }) => {
+const NavItem = ({ isSelected, children, href, onClose, ...rest }) => {
   const selectedStyles = {
     color: useColorModeValue('#574feb', '#c1c9d7'),
     backgroundColor: useColorModeValue('#eeedfd', '#262a53'),
@@ -126,7 +133,15 @@ const NavItem = ({ isSelected, children, href, ...rest }) => {
   }
 
   return (
-    <Link href={href} style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
+    <Link
+      href={href}
+      style={{ textDecoration: 'none' }}
+      _focus={{ boxShadow: 'none' }}
+      onClick={() => {
+        console.log('onc')
+        onClose()
+      }}
+    >
       <Text
         fontSize='0.875rem'
         cursor='pointer'
