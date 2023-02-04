@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <Box pt='50px'>
       <Text mb='40px'>
-        Welcome to Collector, a tool to help you track you Pokemon trading card collection.
+        Welcome to Collector, a tool to help you track your Pokemon trading card collection.
       </Text>
 
       <ClientOnly>
