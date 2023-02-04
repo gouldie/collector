@@ -31,15 +31,16 @@ export default function SetHeader({ isDesktop, setData, filter, setFilter, sort,
     <>
       <Box
         mb='20px'
+        pb='1rem'
         display='flex'
         justifyContent='space-between'
         alignItems={isDesktop ? 'center' : 'flex-start'}
         flexDirection={isDesktop ? 'row' : 'column'}
       >
-        <Box display='flex'>
+        <Box display='flex' alignItems='center' mb={!isDesktop && '20px'}>
           <Image src={`${S3_URL}/logos/${image}`} alt='Pokemon' style={{ maxHeight: '40px' }} />
 
-          <Heading as='h1' size='lg' sx={{ ml: '25px', mb: !isDesktop && '20px' }}>
+          <Heading as='h1' size='lg' sx={{ ml: '25px' }}>
             {name}
           </Heading>
         </Box>
@@ -54,11 +55,7 @@ export default function SetHeader({ isDesktop, setData, filter, setFilter, sort,
             ]}
           />
 
-          <SearchBar
-            boxStyle={{ padding: 0, marginLeft: '20px' }}
-            filter={filter}
-            setFilter={setFilter}
-          />
+          <SearchBar filter={filter} setFilter={setFilter} />
         </Box>
       </Box>
 

@@ -1,9 +1,9 @@
 import { Box, Input, InputGroup, InputLeftElement } from '@chakra-ui/react'
 import { FiSearch } from 'react-icons/fi'
 
-export default function SearchBar({ filter, setFilter, boxStyle }) {
+export default function SearchBar({ filter, setFilter }) {
   return (
-    <Box padding='1rem'>
+    <Box pl='1rem'>
       <InputGroup size='sm'>
         <InputLeftElement pointerEvents='none'>
           <FiSearch />

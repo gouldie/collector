@@ -6,7 +6,7 @@ function Select({ sort, setSort, options }) {
       size='sm'
       value={sort}
       onChange={e => setSort(e.target.value)}
-      minWidth='140px'
+      minWidth='110px'
       borderRadius='5px'
     >
       {options.map(option => (
