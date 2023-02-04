@@ -83,7 +83,9 @@ const SidebarContent = ({ onClose, ...rest }) => {
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
 
-      <SearchBar filter={filter} setFilter={setFilter} />
+      <Box p='1rem'>
+        <SearchBar filter={filter} setFilter={setFilter} />
+      </Box>
 
       {filteredData.map(series => (
         <Box key={series.title}>

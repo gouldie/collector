@@ -55,7 +55,9 @@ export default function SetHeader({ isDesktop, setData, filter, setFilter, sort,
             ]}
           />
 
-          <SearchBar filter={filter} setFilter={setFilter} />
+          <Box pl='1rem'>
+            <SearchBar filter={filter} setFilter={setFilter} />
+          </Box>
         </Box>
       </Box>
 

@@ -3,7 +3,7 @@ import { FiSearch } from 'react-icons/fi'
 
 export default function SearchBar({ filter, setFilter }) {
   return (
-    <Box pl='1rem'>
+    <Box>
       <InputGroup size='sm'>
         <InputLeftElement pointerEvents='none'>
           <FiSearch />
