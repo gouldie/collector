@@ -10,7 +10,7 @@ function Card({ set, name, image, onClick, isCollected }, ref) {
       cursor='pointer'
       borderRadius='5px'
       _hover={{ boxShadow: '0 0 5px #ddd' }}
-      opacity={isCollected ? 1 : 0.5}
+      opacity={isCollected ? 1 : 0.3}
     >
       <Image
         src={`${S3_URL}/${set}/${image}`}

@@ -1,16 +1,17 @@
-import { Box, Heading, Progress, Text } from '@chakra-ui/react'
+import { Box, Progress, Text, Image } from '@chakra-ui/react'
 import seriesData from 'data/series'
 import useCollected from 'hooks/useCollected'
 import ClientOnly from 'utils/clientOnly'
+import { S3_URL } from '@globals'
 
 export default function Home() {
   const { collected } = useCollected()
 
   return (
-    <Box>
-      <Heading use='h5' mt='10px' mb='20px'>
-        Home
-      </Heading>
+    <Box pt='50px'>
+      <Text mb='40px'>
+        Welcome to Collector, a tool to help you track you Pokemon trading card collection.
+      </Text>
 
       <ClientOnly>
         {seriesData.map(series => (
@@ -25,9 +26,17 @@ export default function Home() {
 
               return (
                 <Box key={set.name} mb='6px'>
-                  <Text fontSize='sm' width='150px' mb='5px'>
-                    {set.name}
-                  </Text>
+                  <Box display='flex' alignItems='center' mb='5px'>
+                    <Image
+                      src={`${S3_URL}/logos/${set.image}`}
+                      alt='Pokemon'
+                      sx={{ width: '25px', display: 'block', mr: '10px' }}
+                    />
+
+                    <Text fontSize='sm' width='150px'>
+                      {set.name}
+                    </Text>
+                  </Box>
 
                   <Box display='flex' alignItems='center'>
                     <Progress
