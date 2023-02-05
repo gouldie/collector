@@ -25,7 +25,7 @@ function Tag({ tag, sx = {} }) {
 }
 
 export default function SetHeader({ isDesktop, setData, filter, setFilter, sort, setSort }) {
-  const { name, image, released, cards } = setData
+  const { id, name, released, cards } = setData
 
   return (
     <>
@@ -38,7 +38,7 @@ export default function SetHeader({ isDesktop, setData, filter, setFilter, sort,
         flexDirection={isDesktop ? 'row' : 'column'}
       >
         <Box display='flex' alignItems='center' mb={!isDesktop && '20px'}>
-          <Image src={`${S3_URL}/logos/${image}`} alt='Pokemon' style={{ maxHeight: '40px' }} />
+          <Image src={`${S3_URL}/logos/${id}.png`} alt='Pokemon' style={{ maxHeight: '40px' }} />
 
           <Heading as='h1' size='lg' sx={{ ml: '25px' }}>
             {name}

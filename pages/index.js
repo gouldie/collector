@@ -29,7 +29,7 @@ export default function Home() {
                   <Box key={set.name} mb='6px'>
                     <Box display='flex' alignItems='center' mb='5px'>
                       <Image
-                        src={`${S3_URL}/logos/${set.image}`}
+                        src={`${S3_URL}/logos/${set.id}.png`}
                         alt='Set Logo'
                         sx={{ width: '25px', display: 'block', mr: '10px' }}
                       />

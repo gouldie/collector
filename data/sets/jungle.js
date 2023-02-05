@@ -2,7 +2,6 @@ export default {
   id: 'jungle',
   imageId: 'ju',
   name: 'Jungle',
-  image: 'jungle.png',
   released: 'Jun 16th 1999',
   cards: {
     1: {

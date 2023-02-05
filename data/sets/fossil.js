@@ -2,7 +2,6 @@ export default {
   id: 'fossil',
   imageId: 'fo',
   name: 'Fossil',
-  image: 'fossil.png',
   released: 'Oct 10th 1999',
   cards: {
     1: {

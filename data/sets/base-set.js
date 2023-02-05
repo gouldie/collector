@@ -2,7 +2,6 @@ export default {
   id: 'base-set',
   imageId: 'bs',
   name: 'Base Set',
-  image: 'base-set.png',
   released: 'Jan 9th 1999',
   cards: {
     1: {
