@@ -6,260 +6,196 @@ export default {
   released: 'Jun 16th 1999',
   cards: {
     1: {
-      name: 'Clefable',
-      image: 'ju.001.clefable.jpg'
+      name: 'Clefable'
     },
     2: {
-      name: 'Electrode',
-      image: 'ju.002.electrode.jpg'
+      name: 'Electrode'
     },
     3: {
-      name: 'Flareon',
-      image: 'ju.003.flareon.jpg'
+      name: 'Flareon'
     },
     4: {
-      name: 'Jolteon',
-      image: 'ju.004.jolteon.jpg'
+      name: 'Jolteon'
     },
     5: {
-      name: 'Kangaskhan',
-      image: 'ju.005.kangaskhan.jpg'
+      name: 'Kangaskhan'
     },
     6: {
-      name: 'Mr Mime',
-      image: 'ju.006.mr_mime.jpg'
+      name: 'Mr Mime'
     },
     7: {
-      name: 'Nidoqueen',
-      image: 'ju.007.nidoqueen.jpg'
+      name: 'Nidoqueen'
     },
     8: {
-      name: 'Pidgeot',
-      image: 'ju.008.pidgeot.jpg'
+      name: 'Pidgeot'
     },
     9: {
-      name: 'Pinsir',
-      image: 'ju.009.pinsir.jpg'
+      name: 'Pinsir'
     },
     10: {
-      name: 'Scyther',
-      image: 'ju.010.scyther.jpg'
+      name: 'Scyther'
     },
     11: {
-      name: 'Snorlax',
-      image: 'ju.011.snorlax.jpg'
+      name: 'Snorlax'
     },
     12: {
-      name: 'Vaporeon',
-      image: 'ju.012.vaporeon.jpg'
+      name: 'Vaporeon'
     },
     13: {
-      name: 'Venomoth',
-      image: 'ju.013.venomoth.jpg'
+      name: 'Venomoth'
     },
     14: {
-      name: 'Victreebel',
-      image: 'ju.014.victreebel.jpg'
+      name: 'Victreebel'
     },
     15: {
-      name: 'Vileplume',
-      image: 'ju.015.vileplume.jpg'
+      name: 'Vileplume'
     },
     16: {
-      name: 'Wigglytuff',
-      image: 'ju.016.wigglytuff.jpg'
+      name: 'Wigglytuff'
     },
     17: {
-      name: 'Clefable',
-      image: 'ju.017.clefable.jpg'
+      name: 'Clefable'
     },
     18: {
-      name: 'Electrode',
-      image: 'ju.018.electrode.jpg'
+      name: 'Electrode'
     },
     19: {
-      name: 'Flareon',
-      image: 'ju.019.flareon.jpg'
+      name: 'Flareon'
     },
     20: {
-      name: 'Jolteon',
-      image: 'ju.020.jolteon.jpg'
+      name: 'Jolteon'
     },
     21: {
-      name: 'Kangaskhan',
-      image: 'ju.021.kangaskhan.jpg'
+      name: 'Kangaskhan'
     },
     22: {
-      name: 'Mr Mime',
-      image: 'ju.022.mr_mime.jpg'
+      name: 'Mr Mime'
     },
     23: {
-      name: 'Nidoqueen',
-      image: 'ju.023.nidoqueen.jpg'
+      name: 'Nidoqueen'
     },
     24: {
-      name: 'Pidgeot',
-      image: 'ju.024.pidgeot.jpg'
+      name: 'Pidgeot'
     },
     25: {
-      name: 'Pinsir',
-      image: 'ju.025.pinsir.jpg'
+      name: 'Pinsir'
     },
     26: {
-      name: 'Scyther',
-      image: 'ju.026.scyther.jpg'
+      name: 'Scyther'
     },
     27: {
-      name: 'Snorlax',
-      image: 'ju.027.snorlax.jpg'
+      name: 'Snorlax'
     },
     28: {
-      name: 'Vaporeon',
-      image: 'ju.028.vaporeon.jpg'
+      name: 'Vaporeon'
     },
     29: {
-      name: 'Venomoth',
-      image: 'ju.029.venomoth.jpg'
+      name: 'Venomoth'
     },
     30: {
-      name: 'Victreebel',
-      image: 'ju.030.victreebel.jpg'
+      name: 'Victreebel'
     },
     31: {
-      name: 'Vileplume',
-      image: 'ju.031.vileplume.jpg'
+      name: 'Vileplume'
     },
     32: {
-      name: 'Wigglytuff',
-      image: 'ju.032.wigglytuff.jpg'
+      name: 'Wigglytuff'
     },
     33: {
-      name: 'Butterfree',
-      image: 'ju.033.butterfree.jpg'
+      name: 'Butterfree'
     },
     34: {
-      name: 'Dodrio',
-      image: 'ju.034.dodrio.jpg'
+      name: 'Dodrio'
     },
     35: {
-      name: 'Exeggutor',
-      image: 'ju.035.exeggutor.jpg'
+      name: 'Exeggutor'
     },
     36: {
-      name: 'Fearow',
-      image: 'ju.036.fearow.jpg'
+      name: 'Fearow'
     },
     37: {
-      name: 'Gloom',
-      image: 'ju.037.gloom.jpg'
+      name: 'Gloom'
     },
     38: {
-      name: 'Lickitung',
-      image: 'ju.038.lickitung.jpg'
+      name: 'Lickitung'
     },
     39: {
-      name: 'Marowak',
-      image: 'ju.039.marowak.jpg'
+      name: 'Marowak'
     },
     40: {
-      name: 'Nidorina',
-      image: 'ju.040.nidorina.jpg'
+      name: 'Nidorina'
     },
     41: {
-      name: 'Parasect',
-      image: 'ju.041.parasect.jpg'
+      name: 'Parasect'
     },
     42: {
-      name: 'Persian',
-      image: 'ju.042.persian.jpg'
+      name: 'Persian'
     },
     43: {
-      name: 'Primeape',
-      image: 'ju.043.primeape.jpg'
+      name: 'Primeape'
     },
     44: {
-      name: 'Rapidash',
-      image: 'ju.044.rapidash.jpg'
+      name: 'Rapidash'
     },
     45: {
-      name: 'Rhydon',
-      image: 'ju.045.rhydon.jpg'
+      name: 'Rhydon'
     },
     46: {
-      name: 'Seaking',
-      image: 'ju.046.seaking.jpg'
+      name: 'Seaking'
     },
     47: {
-      name: 'Tauros',
-      image: 'ju.047.tauros.jpg'
+      name: 'Tauros'
     },
     48: {
-      name: 'Weepinbell',
-      image: 'ju.048.weepinbell.jpg'
+      name: 'Weepinbell'
     },
     49: {
-      name: 'Bellsprout',
-      image: 'ju.049.bellsprout.jpg'
+      name: 'Bellsprout'
     },
     50: {
-      name: 'Cubone',
-      image: 'ju.050.cubone.jpg'
+      name: 'Cubone'
     },
     51: {
-      name: 'Eevee',
-      image: 'ju.051.eevee.jpg'
+      name: 'Eevee'
     },
     52: {
-      name: 'Exeggcute',
-      image: 'ju.052.exeggcute.jpg'
+      name: 'Exeggcute'
     },
     53: {
-      name: 'Goldeen',
-      image: 'ju.053.goldeen.jpg'
+      name: 'Goldeen'
     },
     54: {
-      name: 'Jigglypuff',
-      image: 'ju.054.jigglypuff.jpg'
+      name: 'Jigglypuff'
     },
     55: {
-      name: 'Mankey',
-      image: 'ju.055.mankey.jpg'
+      name: 'Mankey'
     },
     56: {
-      name: 'Meowth',
-      image: 'ju.056.meowth.jpg'
+      name: 'Meowth'
     },
     57: {
-      name: 'Nidoran Female',
-      image: 'ju.057.nidoran_female.jpg'
+      name: 'Nidoran Female'
     },
     58: {
-      name: 'Oddish',
-      image: 'ju.058.oddish.jpg'
+      name: 'Oddish'
     },
     59: {
-      name: 'Paras',
-      image: 'ju.059.paras.jpg'
+      name: 'Paras'
     },
     60: {
-      name: 'Pikachu',
-      image: 'ju.060.pikachu.jpg'
+      name: 'Pikachu'
     },
     61: {
-      name: 'Rhyhorn',
-      image: 'ju.061.rhyhorn.jpg'
+      name: 'Rhyhorn'
     },
     62: {
-      name: 'Spearow',
-      image: 'ju.062.spearow.jpg'
+      name: 'Spearow'
     },
     63: {
-      name: 'Venonat',
-      image: 'ju.063.venonat.jpg'
+      name: 'Venonat'
     },
     64: {
-      name: 'Poke Ball',
-      image: 'ju.064.poke_ball.jpg'
+      name: 'Poke Ball'
     }
   }
 }

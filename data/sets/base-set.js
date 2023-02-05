@@ -6,412 +6,310 @@ export default {
   released: 'Jan 9th 1999',
   cards: {
     1: {
-      name: 'Alakazam',
-      image: 'bs.001.alakazam.jpg'
+      name: 'Alakazam'
     },
     2: {
-      name: 'Blastoise',
-      image: 'bs.002.blastoise.jpg'
+      name: 'Blastoise'
     },
     3: {
-      name: 'Chansey',
-      image: 'bs.003.chansey.jpg'
+      name: 'Chansey'
     },
     4: {
-      name: 'Charizard',
-      image: 'bs.004.charizard.jpg'
+      name: 'Charizard'
     },
     5: {
-      name: 'Clefairy',
-      image: 'bs.005.clefairy.jpg'
+      name: 'Clefairy'
     },
     6: {
-      name: 'Gyarados',
-      image: 'bs.006.gyarados.jpg'
+      name: 'Gyarados'
     },
     7: {
-      name: 'Hitmonchan',
-      image: 'bs.007.hitmonchan.jpg'
+      name: 'Hitmonchan'
     },
     8: {
-      name: 'Machamp',
-      image: 'bs.008.machamp.jpg'
+      name: 'Machamp'
     },
     9: {
-      name: 'Magneton',
-      image: 'bs.009.magneton.jpg'
+      name: 'Magneton'
     },
     10: {
-      name: 'Mewtwo',
-      image: 'bs.010.mewtwo.jpg'
+      name: 'Mewtwo'
     },
     11: {
-      name: 'Nidoking',
-      image: 'bs.011.nidoking.jpg'
+      name: 'Nidoking'
     },
     12: {
-      name: 'Ninetales',
-      image: 'bs.012.ninetales.jpg'
+      name: 'Ninetales'
     },
     13: {
-      name: 'Poliwrath',
-      image: 'bs.013.poliwrath.jpg'
+      name: 'Poliwrath'
     },
     14: {
-      name: 'Raichu',
-      image: 'bs.014.raichu.jpg'
+      name: 'Raichu'
     },
     15: {
-      name: 'Venusaur',
-      image: 'bs.015.venusaur.jpg'
+      name: 'Venusaur'
     },
     16: {
-      name: 'Zapdos',
-      image: 'bs.016.zapdos.jpg'
+      name: 'Zapdos'
     },
     17: {
-      name: 'Beedrill',
-      image: 'bs.017.beedrill.jpg'
+      name: 'Beedrill'
     },
     18: {
-      name: 'Dragonair',
-      image: 'bs.018.dragonair.jpg'
+      name: 'Dragonair'
     },
     19: {
-      name: 'Dugtrio',
-      image: 'bs.019.dugtrio.jpg'
+      name: 'Dugtrio'
     },
     20: {
-      name: 'Electabuzz',
-      image: 'bs.020.electabuzz.jpg'
+      name: 'Electabuzz'
     },
     21: {
-      name: 'Electrode',
-      image: 'bs.021.electrode.jpg'
+      name: 'Electrode'
     },
     22: {
-      name: 'Pidgeotto',
-      image: 'bs.022.pidgeotto.jpg'
+      name: 'Pidgeotto'
     },
     23: {
-      name: 'Arcanine',
-      image: 'bs.023.arcanine.jpg'
+      name: 'Arcanine'
     },
     24: {
-      name: 'Charmeleon',
-      image: 'bs.024.charmeleon.jpg'
+      name: 'Charmeleon'
     },
     25: {
-      name: 'Dewgong',
-      image: 'bs.025.dewgong.jpg'
+      name: 'Dewgong'
     },
     26: {
-      name: 'Dratini',
-      image: 'bs.026.dratini.jpg'
+      name: 'Dratini'
     },
     27: {
-      name: 'Farfetchd',
-      image: 'bs.027.farfetchd.jpg'
+      name: 'Farfetchd'
     },
     28: {
-      name: 'Growlithe',
-      image: 'bs.028.growlithe.jpg'
+      name: 'Growlithe'
     },
     29: {
-      name: 'Haunter',
-      image: 'bs.029.haunter.jpg'
+      name: 'Haunter'
     },
     30: {
-      name: 'Ivysaur',
-      image: 'bs.030.ivysaur.jpg'
+      name: 'Ivysaur'
     },
     31: {
-      name: 'Jynx',
-      image: 'bs.031.jynx.jpg'
+      name: 'Jynx'
     },
     32: {
-      name: 'Kadabra',
-      image: 'bs.032.kadabra.jpg'
+      name: 'Kadabra'
     },
     33: {
-      name: 'Kakuna',
-      image: 'bs.033.kakuna.jpg'
+      name: 'Kakuna'
     },
     34: {
-      name: 'Machoke',
-      image: 'bs.034.machoke.jpg'
+      name: 'Machoke'
     },
     35: {
-      name: 'Magikarp',
-      image: 'bs.035.magikarp.jpg'
+      name: 'Magikarp'
     },
     36: {
-      name: 'Magmar',
-      image: 'bs.036.magmar.jpg'
+      name: 'Magmar'
     },
     37: {
-      name: 'Nidorino',
-      image: 'bs.037.nidorino.jpg'
+      name: 'Nidorino'
     },
     38: {
-      name: 'Poliwhirl',
-      image: 'bs.038.poliwhirl.jpg'
+      name: 'Poliwhirl'
     },
     39: {
-      name: 'Porygon',
-      image: 'bs.039.porygon.jpg'
+      name: 'Porygon'
     },
     40: {
-      name: 'Raticate',
-      image: 'bs.040.raticate.jpg'
+      name: 'Raticate'
     },
     41: {
-      name: 'Seel',
-      image: 'bs.041.seel.jpg'
+      name: 'Seel'
     },
     42: {
-      name: 'Wartortle',
-      image: 'bs.042.wartortle.jpg'
+      name: 'Wartortle'
     },
     43: {
-      name: 'Abra',
-      image: 'bs.043.abra.jpg'
+      name: 'Abra'
     },
     44: {
-      name: 'Bulbasaur',
-      image: 'bs.044.bulbasaur.jpg'
+      name: 'Bulbasaur'
     },
     45: {
-      name: 'Caterpie',
-      image: 'bs.045.caterpie.jpg'
+      name: 'Caterpie'
     },
     46: {
-      name: 'Charmander',
-      image: 'bs.046.charmander.jpg'
+      name: 'Charmander'
     },
     47: {
-      name: 'Diglett',
-      image: 'bs.047.diglett.jpg'
+      name: 'Diglett'
     },
     48: {
-      name: 'Doduo',
-      image: 'bs.048.doduo.jpg'
+      name: 'Doduo'
     },
     49: {
-      name: 'Drowzee',
-      image: 'bs.049.drowzee.jpg'
+      name: 'Drowzee'
     },
     50: {
-      name: 'Gastly',
-      image: 'bs.050.gastly.jpg'
+      name: 'Gastly'
     },
     51: {
-      name: 'Koffing',
-      image: 'bs.051.koffing.jpg'
+      name: 'Koffing'
     },
     52: {
-      name: 'Machop',
-      image: 'bs.052.machop.jpg'
+      name: 'Machop'
     },
     53: {
-      name: 'Magnemite',
-      image: 'bs.053.magnemite.jpg'
+      name: 'Magnemite'
     },
     54: {
-      name: 'Metapod',
-      image: 'bs.054.metapod.jpg'
+      name: 'Metapod'
     },
     55: {
-      name: 'Nidoran Male',
-      image: 'bs.055.nidoran_male.jpg'
+      name: 'Nidoran Male'
     },
     56: {
-      name: 'Onix',
-      image: 'bs.056.onix.jpg'
+      name: 'Onix'
     },
     57: {
-      name: 'Pidgey',
-      image: 'bs.057.pidgey.jpg'
+      name: 'Pidgey'
     },
     58: {
-      name: 'Pikachu',
-      image: 'bs.058.pikachu.jpg'
+      name: 'Pikachu'
     },
     59: {
-      name: 'Poliwag',
-      image: 'bs.059.poliwag.jpg'
+      name: 'Poliwag'
     },
     60: {
-      name: 'Ponyta',
-      image: 'bs.060.ponyta.jpg'
+      name: 'Ponyta'
     },
     61: {
-      name: 'Rattata',
-      image: 'bs.061.rattata.jpg'
+      name: 'Rattata'
     },
     62: {
-      name: 'Sandshrew',
-      image: 'bs.062.sandshrew.jpg'
+      name: 'Sandshrew'
     },
     63: {
-      name: 'Squirtle',
-      image: 'bs.063.squirtle.jpg'
+      name: 'Squirtle'
     },
     64: {
-      name: 'Starmie',
-      image: 'bs.064.starmie.jpg'
+      name: 'Starmie'
     },
     65: {
-      name: 'Staryu',
-      image: 'bs.065.staryu.jpg'
+      name: 'Staryu'
     },
     66: {
-      name: 'Tangela',
-      image: 'bs.066.tangela.jpg'
+      name: 'Tangela'
     },
     67: {
-      name: 'Voltorb',
-      image: 'bs.067.voltorb.jpg'
+      name: 'Voltorb'
     },
     68: {
-      name: 'Vulpix',
-      image: 'bs.068.vulpix.jpg'
+      name: 'Vulpix'
     },
     69: {
-      name: 'Weedle',
-      image: 'bs.069.weedle.jpg'
+      name: 'Weedle'
     },
     70: {
-      name: 'Clefairy Doll',
-      image: 'bs.070.clefairy_doll.jpg'
+      name: 'Clefairy Doll'
     },
     71: {
-      name: 'Computer Search',
-      image: 'bs.071.computer_search.jpg'
+      name: 'Computer Search'
     },
     72: {
-      name: 'Devolution Spray',
-      image: 'bs.072.devolution_spray.jpg'
+      name: 'Devolution Spray'
     },
     73: {
-      name: 'Impostor Professor Oak',
-      image: 'bs.073.impostor_professor_oak.jpg'
+      name: 'Impostor Professor Oak'
     },
     74: {
-      name: 'Item Finder',
-      image: 'bs.074.item_finder.jpg'
+      name: 'Item Finder'
     },
     75: {
-      name: 'Lass',
-      image: 'bs.075.lass.jpg'
+      name: 'Lass'
     },
     76: {
-      name: 'Pokemon Breeder',
-      image: 'bs.076.pokemon_breeder.jpg'
+      name: 'Pokemon Breeder'
     },
     77: {
-      name: 'Pokemon Trader',
-      image: 'bs.077.pokemon_trader.jpg'
+      name: 'Pokemon Trader'
     },
     78: {
-      name: 'Scoop Up',
-      image: 'bs.078.scoop_up.jpg'
+      name: 'Scoop Up'
     },
     79: {
-      name: 'Super Energy Removal',
-      image: 'bs.079.super_energy_removal.jpg'
+      name: 'Super Energy Removal'
     },
     80: {
-      name: 'Defender',
-      image: 'bs.080.defender.jpg'
+      name: 'Defender'
     },
     81: {
-      name: 'Energy Retrieval',
-      image: 'bs.081.energy_retrieval.jpg'
+      name: 'Energy Retrieval'
     },
     82: {
-      name: 'Full Heal',
-      image: 'bs.082.full_heal.jpg'
+      name: 'Full Heal'
     },
     83: {
-      name: 'Maintenance',
-      image: 'bs.083.maintenance.jpg'
+      name: 'Maintenance'
     },
     84: {
-      name: 'PlusPower',
-      image: 'bs.084.pluspower.jpg'
+      name: 'PlusPower'
     },
     85: {
-      name: 'Pokemon Center',
-      image: 'bs.085.pokemon_center.jpg'
+      name: 'Pokemon Center'
     },
     86: {
-      name: 'Pokemon Flute',
-      image: 'bs.086.pokemon_flute.jpg'
+      name: 'Pokemon Flute'
     },
     87: {
-      name: 'Pokedex',
-      image: 'bs.087.pokedex.jpg'
+      name: 'Pokedex'
     },
     88: {
-      name: 'Professor Oak',
-      image: 'bs.088.professor_oak.jpg'
+      name: 'Professor Oak'
     },
     89: {
-      name: 'Revive',
-      image: 'bs.089.revive.jpg'
+      name: 'Revive'
     },
     90: {
-      name: 'Super Potion',
-      image: 'bs.090.super_potion.jpg'
+      name: 'Super Potion'
     },
     91: {
-      name: 'Bill',
-      image: 'bs.091.bill.jpg'
+      name: 'Bill'
     },
     92: {
-      name: 'Energy Removal',
-      image: 'bs.092.energy_removal.jpg'
+      name: 'Energy Removal'
     },
     93: {
-      name: 'Gust of Wind',
-      image: 'bs.093.gust_of_wind.jpg'
+      name: 'Gust of Wind'
     },
     94: {
-      name: 'Potion',
-      image: 'bs.094.potion.jpg'
+      name: 'Potion'
     },
     95: {
-      name: 'Switch',
-      image: 'bs.095.switch.jpg'
+      name: 'Switch'
     },
     96: {
-      name: 'Double Colorless Energy',
-      image: 'bs.096.double_colorless_energy.jpg'
+      name: 'Double Colorless Energy'
     },
     97: {
-      name: 'Fighting Energy',
-      image: 'bs.097.fighting_energy.jpg'
+      name: 'Fighting Energy'
     },
     98: {
-      name: 'Fire Energy',
-      image: 'bs.098.fire_energy.jpg'
+      name: 'Fire Energy'
     },
     99: {
-      name: 'Grass Energy',
-      image: 'bs.099.grass_energy.jpg'
+      name: 'Grass Energy'
     },
     100: {
-      name: 'Lightning Energy',
-      image: 'bs.100.lightning_energy.jpg'
+      name: 'Lightning Energy'
     },
     101: {
-      name: 'Psychic Energy',
-      image: 'bs.101.psychic_energy.jpg'
+      name: 'Psychic Energy'
     },
     102: {
-      name: 'Water Energy',
-      image: 'bs.102.water_energy.jpg'
+      name: 'Water Energy'
     }
   }
 }

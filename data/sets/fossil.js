@@ -6,252 +6,190 @@ export default {
   released: 'Oct 10th 1999',
   cards: {
     1: {
-      name: 'Aerodactyl',
-      image: 'fo.001.aerodactyl.jpg'
+      name: 'Aerodactyl'
     },
     2: {
-      name: 'Articuno',
-      image: 'fo.002.articuno.jpg'
+      name: 'Articuno'
     },
     3: {
-      name: 'Ditto',
-      image: 'fo.003.ditto.jpg'
+      name: 'Ditto'
     },
     4: {
-      name: 'Dragonite',
-      image: 'fo.004.dragonite.jpg'
+      name: 'Dragonite'
     },
     5: {
-      name: 'Gengar',
-      image: 'fo.005.gengar.jpg'
+      name: 'Gengar'
     },
     6: {
-      name: 'Haunter',
-      image: 'fo.006.haunter.jpg'
+      name: 'Haunter'
     },
     7: {
-      name: 'Hitmonlee',
-      image: 'fo.007.hitmonlee.jpg'
+      name: 'Hitmonlee'
     },
     8: {
-      name: 'Hypno',
-      image: 'fo.008.hypno.jpg'
+      name: 'Hypno'
     },
     9: {
-      name: 'Kabutops',
-      image: 'fo.009.kabutops.jpg'
+      name: 'Kabutops'
     },
     10: {
-      name: 'Lapras',
-      image: 'fo.010.lapras.jpg'
+      name: 'Lapras'
     },
     11: {
-      name: 'Magneton',
-      image: 'fo.011.magneton.jpg'
+      name: 'Magneton'
     },
     12: {
-      name: 'Moltres',
-      image: 'fo.012.moltres.jpg'
+      name: 'Moltres'
     },
     13: {
-      name: 'Muk',
-      image: 'fo.013.muk.jpg'
+      name: 'Muk'
     },
     14: {
-      name: 'Raichu',
-      image: 'fo.014.raichu.jpg'
+      name: 'Raichu'
     },
     15: {
-      name: 'Zapdos',
-      image: 'fo.015.zapdos.jpg'
+      name: 'Zapdos'
     },
     16: {
-      name: 'Aerodactyl',
-      image: 'fo.016.aerodactyl.jpg'
+      name: 'Aerodactyl'
     },
     17: {
-      name: 'Articuno',
-      image: 'fo.017.articuno.jpg'
+      name: 'Articuno'
     },
     18: {
-      name: 'Ditto',
-      image: 'fo.018.ditto.jpg'
+      name: 'Ditto'
     },
     19: {
-      name: 'Dragonite',
-      image: 'fo.019.dragonite.jpg'
+      name: 'Dragonite'
     },
     20: {
-      name: 'Gengar',
-      image: 'fo.020.gengar.jpg'
+      name: 'Gengar'
     },
     21: {
-      name: 'Haunter',
-      image: 'fo.021.haunter.jpg'
+      name: 'Haunter'
     },
     22: {
-      name: 'Hitmonlee',
-      image: 'fo.022.hitmonlee.jpg'
+      name: 'Hitmonlee'
     },
     23: {
-      name: 'Hypno',
-      image: 'fo.023.hypno.jpg'
+      name: 'Hypno'
     },
     24: {
-      name: 'Kabutops',
-      image: 'fo.024.kabutops.jpg'
+      name: 'Kabutops'
     },
     25: {
-      name: 'Lapras',
-      image: 'fo.025.lapras.jpg'
+      name: 'Lapras'
     },
     26: {
-      name: 'Magneton',
-      image: 'fo.026.magneton.jpg'
+      name: 'Magneton'
     },
     27: {
-      name: 'Moltres',
-      image: 'fo.027.moltres.jpg'
+      name: 'Moltres'
     },
     28: {
-      name: 'Muk',
-      image: 'fo.028.muk.jpg'
+      name: 'Muk'
     },
     29: {
-      name: 'Raichu',
-      image: 'fo.029.raichu.jpg'
+      name: 'Raichu'
     },
     30: {
-      name: 'Zapdos',
-      image: 'fo.030.zapdos.jpg'
+      name: 'Zapdos'
     },
     31: {
-      name: 'Arbok',
-      image: 'fo.031.arbok.jpg'
+      name: 'Arbok'
     },
     32: {
-      name: 'Cloyster',
-      image: 'fo.032.cloyster.jpg'
+      name: 'Cloyster'
     },
     33: {
-      name: 'Gastly',
-      image: 'fo.033.gastly.jpg'
+      name: 'Gastly'
     },
     34: {
-      name: 'Golbat',
-      image: 'fo.034.golbat.jpg'
+      name: 'Golbat'
     },
     35: {
-      name: 'Golduck',
-      image: 'fo.035.golduck.jpg'
+      name: 'Golduck'
     },
     36: {
-      name: 'Golem',
-      image: 'fo.036.golem.jpg'
+      name: 'Golem'
     },
     37: {
-      name: 'Graveler',
-      image: 'fo.037.graveler.jpg'
+      name: 'Graveler'
     },
     38: {
-      name: 'Kingler',
-      image: 'fo.038.kingler.jpg'
+      name: 'Kingler'
     },
     39: {
-      name: 'Magmar',
-      image: 'fo.039.magmar.jpg'
+      name: 'Magmar'
     },
     40: {
-      name: 'Omastar',
-      image: 'fo.040.omastar.jpg'
+      name: 'Omastar'
     },
     41: {
-      name: 'Sandslash',
-      image: 'fo.041.sandslash.jpg'
+      name: 'Sandslash'
     },
     42: {
-      name: 'Seadra',
-      image: 'fo.042.seadra.jpg'
+      name: 'Seadra'
     },
     43: {
-      name: 'Slowbro',
-      image: 'fo.043.slowbro.jpg'
+      name: 'Slowbro'
     },
     44: {
-      name: 'Tentacruel',
-      image: 'fo.044.tentacruel.jpg'
+      name: 'Tentacruel'
     },
     45: {
-      name: 'Weezing',
-      image: 'fo.045.weezing.jpg'
+      name: 'Weezing'
     },
     46: {
-      name: 'Ekans',
-      image: 'fo.046.ekans.jpg'
+      name: 'Ekans'
     },
     47: {
-      name: 'Geodude',
-      image: 'fo.047.geodude.jpg'
+      name: 'Geodude'
     },
     48: {
-      name: 'Grimer',
-      image: 'fo.048.grimer.jpg'
+      name: 'Grimer'
     },
     49: {
-      name: 'Horsea',
-      image: 'fo.049.horsea.jpg'
+      name: 'Horsea'
     },
     50: {
-      name: 'Kabuto',
-      image: 'fo.050.kabuto.jpg'
+      name: 'Kabuto'
     },
     51: {
-      name: 'Krabby',
-      image: 'fo.051.krabby.jpg'
+      name: 'Krabby'
     },
     52: {
-      name: 'Omanyte',
-      image: 'fo.052.omanyte.jpg'
+      name: 'Omanyte'
     },
     53: {
-      name: 'Psyduck',
-      image: 'fo.053.psyduck.jpg'
+      name: 'Psyduck'
     },
     54: {
-      name: 'Shellder',
-      image: 'fo.054.shellder.jpg'
+      name: 'Shellder'
     },
     55: {
-      name: 'Slowpoke',
-      image: 'fo.055.slowpoke.jpg'
+      name: 'Slowpoke'
     },
     56: {
-      name: 'Tentacool',
-      image: 'fo.056.tentacool.jpg'
+      name: 'Tentacool'
     },
     57: {
-      name: 'Zubat',
-      image: 'fo.057.zubat.jpg'
+      name: 'Zubat'
     },
     58: {
-      name: 'Mr Fuji',
-      image: 'fo.058.mr_fuji.jpg'
+      name: 'Mr Fuji'
     },
     59: {
-      name: 'Energy Search',
-      image: 'fo.059.energy_search.jpg'
+      name: 'Energy Search'
     },
     60: {
-      name: 'Gambler',
-      image: 'fo.060.gambler.jpg'
+      name: 'Gambler'
     },
     61: {
-      name: 'Recycle',
-      image: 'fo.061.recycle.jpg'
+      name: 'Recycle'
     },
     62: {
-      name: 'Mysterious Fossil',
-      image: 'fo.062.mysterious_fossil.jpg'
+      name: 'Mysterious Fossil'
     }
   }
 }

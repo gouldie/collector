@@ -6,204 +6,154 @@ export default {
   released: 'Aug 14th 2000',
   cards: {
     1: {
-      name: "Blaine's Moltres",
-      image: 'g1.001.blaines_moltres.jpg'
+      name: "Blaine's Moltres"
     },
     2: {
-      name: "Brock's Rhydon",
-      image: 'g1.002.brocks_rhydon.jpg'
+      name: "Brock's Rhydon"
     },
     3: {
-      name: "Erika's Clefable",
-      image: 'g1.003.erikas_clefable.jpg'
+      name: "Erika's Clefable"
     },
     4: {
-      name: "Erika's Dragonair",
-      image: 'g1.004.erikas_dragonair.jpg'
+      name: "Erika's Dragonair"
     },
     5: {
-      name: "Erika's Vileplume",
-      image: 'g1.005.erikas_vileplume.jpg'
+      name: "Erika's Vileplume"
     },
     6: {
-      name: "Lt. Surge's Electabuzz",
-      image: 'g1.006.lt_surges_electabuzz.jpg'
+      name: "Lt. Surge's Electabuzz"
     },
     7: {
-      name: "Lt. Surge's Fearow",
-      image: 'g1.007.lt_surges_fearow.jpg'
+      name: "Lt. Surge's Fearow"
     },
     8: {
-      name: "Lt. Surge's Magneton",
-      image: 'g1.008.lt_surges_magneton.jpg'
+      name: "Lt. Surge's Magneton"
     },
     9: {
-      name: "Misty's Seadra",
-      image: 'g1.009.mistys_seadra.jpg'
+      name: "Misty's Seadra"
     },
     10: {
-      name: "Misty's Tentacruel",
-      image: 'g1.010.mistys_tentacruel.jpg'
+      name: "Misty's Tentacruel"
     },
     11: {
-      name: "Rocket's Hitmonchan",
-      image: 'g1.011.rockets_hitmonchan.jpg'
+      name: "Rocket's Hitmonchan"
     },
     12: {
-      name: "Rocket's Moltres",
-      image: 'g1.012.rockets_moltres.jpg'
+      name: "Rocket's Moltres"
     },
     13: {
-      name: "Rocket's Scyther",
-      image: 'g1.013.rockets_scyther.jpg'
+      name: "Rocket's Scyther"
     },
     14: {
-      name: "Sabrina's Gengar",
-      image: 'g1.014.sabrinas_gengar.jpg'
+      name: "Sabrina's Gengar"
     },
     15: {
-      name: 'Brock',
-      image: 'g1.015.brock.jpg'
+      name: 'Brock'
     },
     16: {
-      name: 'Erika',
-      image: 'g1.016.erika.jpg'
+      name: 'Erika'
     },
     17: {
-      name: 'Lt. Surge',
-      image: 'g1.017.lt_surge.jpg'
+      name: 'Lt. Surge'
     },
     18: {
-      name: 'Misty',
-      image: 'g1.018.misty.jpg'
+      name: 'Misty'
     },
     19: {
-      name: "The Rocket's Trap",
-      image: 'g1.019.the_rockets_trap.jpg'
+      name: "The Rocket's Trap"
     },
     20: {
-      name: "Brock's Golem",
-      image: 'g1.020.brocks_golem.jpg'
+      name: "Brock's Golem"
     },
     21: {
-      name: "Brock's Onix",
-      image: 'g1.021.brocks_onix.jpg'
+      name: "Brock's Onix"
     },
     22: {
-      name: "Brock's Rhyhorn",
-      image: 'g1.022.brocks_rhyhorn.jpg'
+      name: "Brock's Rhyhorn"
     },
     23: {
-      name: "Brock's Sandslash",
-      image: 'g1.023.brocks_sandslash.jpg'
+      name: "Brock's Sandslash"
     },
     24: {
-      name: "Brock's Zubat",
-      image: 'g1.024.brocks_zubat.jpg'
+      name: "Brock's Zubat"
     },
     25: {
-      name: "Erika's Clefairy",
-      image: 'g1.025.erikas_clefairy.jpg'
+      name: "Erika's Clefairy"
     },
     26: {
-      name: "Erika's Victreebel",
-      image: 'g1.026.erikas_victreebel.jpg'
+      name: "Erika's Victreebel"
     },
     27: {
-      name: "Lt. Surge's Electabuzz",
-      image: 'g1.027.lt_surges_electabuzz.jpg'
+      name: "Lt. Surge's Electabuzz"
     },
     28: {
-      name: "Lt. Surge's Raichu",
-      image: 'g1.028.lt_surges_raichu.jpg'
+      name: "Lt. Surge's Raichu"
     },
     29: {
-      name: "Misty's Cloyster",
-      image: 'g1.029.mistys_cloyster.jpg'
+      name: "Misty's Cloyster"
     },
     30: {
-      name: "Misty's Goldeen",
-      image: 'g1.030.mistys_goldeen.jpg'
+      name: "Misty's Goldeen"
     },
     31: {
-      name: "Misty's Poliwrath",
-      image: 'g1.031.mistys_poliwrath.jpg'
+      name: "Misty's Poliwrath"
     },
     32: {
-      name: "Misty's Tentacool",
-      image: 'g1.032.mistys_tentacool.jpg'
+      name: "Misty's Tentacool"
     },
     33: {
-      name: "Rocket's Snorlax",
-      image: 'g1.033.rockets_snorlax.jpg'
+      name: "Rocket's Snorlax"
     },
     34: {
-      name: "Sabrina's Venomoth",
-      image: 'g1.034.sabrinas_venomoth.jpg'
+      name: "Sabrina's Venomoth"
     },
     35: {
-      name: "Blaine's Growlithe",
-      image: 'g1.035.blaines_growlithe.jpg'
+      name: "Blaine's Growlithe"
     },
     36: {
-      name: "Blaine's Kangaskhan",
-      image: 'g1.036.blaines_kangaskhan.jpg'
+      name: "Blaine's Kangaskhan"
     },
     37: {
-      name: "Blaine's Magmar",
-      image: 'g1.037.blaines_magmar.jpg'
+      name: "Blaine's Magmar"
     },
     38: {
-      name: "Brock's Geodude",
-      image: 'g1.038.brocks_geodude.jpg'
+      name: "Brock's Geodude"
     },
     39: {
-      name: "Brock's Golbat",
-      image: 'g1.039.brocks_golbat.jpg'
+      name: "Brock's Golbat"
     },
     40: {
-      name: "Brock's Graveler",
-      image: 'g1.040.brocks_graveler.jpg'
+      name: "Brock's Graveler"
     },
     41: {
-      name: "Brock's Lickitung",
-      image: 'g1.041.brocks_lickitung.jpg'
+      name: "Brock's Lickitung"
     },
     42: {
-      name: "Erika's Dratini",
-      image: 'g1.042.erikas_dratini.jpg'
+      name: "Erika's Dratini"
     },
     43: {
-      name: "Erika's Exeggcute",
-      image: 'g1.043.erikas_exeggcute.jpg'
+      name: "Erika's Exeggcute"
     },
     44: {
-      name: "Erika's Exeggutor",
-      image: 'g1.044.erikas_exeggutor.jpg'
+      name: "Erika's Exeggutor"
     },
     45: {
-      name: "Erika's Gloom",
-      image: 'g1.045.erikas_gloom.jpg'
+      name: "Erika's Gloom"
     },
     46: {
-      name: "Erika's Gloom",
-      image: 'g1.046.erikas_gloom.jpg'
+      name: "Erika's Gloom"
     },
     47: {
-      name: "Erika's Oddish",
-      image: 'g1.047.erikas_oddish.jpg'
+      name: "Erika's Oddish"
     },
     48: {
-      name: "Erika's Weepinbell",
-      image: 'g1.048.erikas_weepinbell.jpg'
+      name: "Erika's Weepinbell"
     },
     49: {
-      name: "Erika's Weepinbell",
-      image: 'g1.049.erikas_weepinbell.jpg'
+      name: "Erika's Weepinbell"
     },
     50: {
-      name: "Lt. Surge's Magnemite",
-      image: 'g1.050.lt_surges_magnemite.jpg'
+      name: "Lt. Surge's Magnemite"
     },
     51: {
       name: "Lt. Surge's Raticate"
