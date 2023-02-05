@@ -87,23 +87,18 @@ const SidebarContent = ({ onClose, ...rest }) => {
         <SearchBar filter={filter} setFilter={setFilter} />
       </Box>
 
+      <NavItem p='0.3rem 1.25rem' isSelected={router.asPath === '/'} href='/' onClose={onClose}>
+        Home
+      </NavItem>
+
       {filteredData.map(series => (
         <Box key={series.title}>
-          <NavItem
-            mb='25px'
-            p='0.3rem 1.25rem'
-            isSelected={router.asPath === '/'}
-            href='/'
-            onClose={onClose}
-          >
-            Home
-          </NavItem>
-
           <Text
             fontSize='0.75rem'
             fontWeight='600'
             textTransform='uppercase'
             color={useColorModeValue('#727d90', '#727d90')}
+            mt='20px'
             mb='0.5rem'
             p='0.3rem 1.25rem'
           >
@@ -140,7 +135,6 @@ const NavItem = ({ isSelected, children, href, onClose, ...rest }) => {
       style={{ textDecoration: 'none' }}
       _focus={{ boxShadow: 'none' }}
       onClick={() => {
-        console.log('onc')
         onClose()
       }}
     >

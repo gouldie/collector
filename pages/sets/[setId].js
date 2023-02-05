@@ -10,14 +10,14 @@ export default function Set({ isDesktop }) {
   const router = useRouter()
   const [filter, setFilter] = useState('')
   const [sort, setSort] = useState('no')
-  const { set } = router.query
+  const { setId } = router.query
 
   // This is only used if using 'npm start' (SSR), not 'npm run export' (pre-rendering)
-  if (!validSets.includes(set)) {
+  if (!validSets.includes(setId)) {
     return <Text style={{ textAlign: 'center' }}>Set not found</Text>
   }
 
-  const setData = require('../../data/sets/' + set).default || {}
+  const setData = require('../../data/sets/' + setId).default || {}
 
   return (
     <Box>
@@ -30,7 +30,7 @@ export default function Set({ isDesktop }) {
         setSort={setSort}
       />
       <ClientOnly>
-        <CardList key={set} set={set} cards={setData.cards} filter={filter} sort={sort} />
+        <CardList setData={setData} filter={filter} sort={sort} />
       </ClientOnly>
     </Box>
   )

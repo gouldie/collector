@@ -15,11 +15,15 @@ const defaultValue = {}
 function useCollected() {
   const [collected, setCollected] = useLocalStorage('collected', defaultValue)
 
-  const collectCard = ({ set, no } = {}) => {
+  const collectCard = ({ setId, no } = {}) => {
     setCollected(currentCollected => {
       const newCollected = { ...currentCollected }
 
-      newCollected[set][no] = !newCollected[set][no]
+      if (!newCollected[setId]) {
+        newCollected[setId] = {}
+      }
+
+      newCollected[setId][no] = !newCollected[setId][no]
 
       return newCollected
     })

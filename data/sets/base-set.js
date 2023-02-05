@@ -1,5 +1,6 @@
 export default {
   id: 'base-set',
+  imageId: 'bs',
   name: 'Base Set',
   image: 'base-set.png',
   released: 'Jan 9th 1999',
@@ -221,7 +222,7 @@ export default {
       image: 'bs.054.metapod.jpg'
     },
     55: {
-      name: 'Nidoran-m',
+      name: 'Nidoran Male',
       image: 'bs.055.nidoran_male.jpg'
     },
     56: {

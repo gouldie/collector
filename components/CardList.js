@@ -1,25 +1,21 @@
 import { useState } from 'react'
 import FlipMove from 'react-flip-move'
-import {
-  Box,
-  Image,
-  Modal,
-  ModalContent,
-  ModalOverlay,
-  Button,
-  useDisclosure
-} from '@chakra-ui/react'
+import { Box, useDisclosure } from '@chakra-ui/react'
 import Card from 'components/Card'
 import sortBy from 'utils/sort'
 import useCollected from 'hooks/useCollected'
-import { S3_URL } from '@globals'
+import getCardFileName from 'utils/getCardFileName'
+import CardModal from 'components/CardModal'
 
-export default function CardList({ set, cards, filter, sort }) {
+export default function CardList({ setData, filter, sort }) {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [selected, setSelected] = useState()
   const { collected, collectCard } = useCollected()
 
-  const cardList = Object.entries(cards).map(([key, value]) => ({ no: Number(key), ...value }))
+  const cardList = Object.entries(setData.cards).map(([key, value]) => ({
+    no: Number(key),
+    ...value
+  }))
   const filteredCards = cardList.filter(e => e.name.toLowerCase().includes(filter.toLowerCase()))
   const sortedCards = filteredCards.sort(sortBy[sort])
 
@@ -33,34 +29,35 @@ export default function CardList({ set, cards, filter, sort }) {
       }}
     >
       <FlipMove typeName={null} duration={300}>
-        {sortedCards.map((card, i) => (
-          <Card
-            key={card.image}
-            set={set}
-            {...card}
-            isCollected={!!collected[set]?.[card.no]}
-            onClick={() => {
-              onOpen(true)
-              setSelected(card)
-            }}
-          />
-        ))}
+        {sortedCards.map((card, i) => {
+          const fileName = getCardFileName(setData.imageId, card.no, card.name)
+
+          return (
+            <Card
+              key={card.no}
+              {...card}
+              setId={setData.id}
+              fileName={fileName}
+              isCollected={!!collected[setData.id]?.[card.no]}
+              onClick={() => {
+                onOpen(true)
+                setSelected(card)
+              }}
+            />
+          )
+        })}
       </FlipMove>
 
-      <Modal isOpen={isOpen} onClose={onClose} isCentered>
-        <ModalOverlay />
-        <ModalContent width='fit-content' background='none'>
-          <Image src={`${S3_URL}/${set}/${selected?.image}`} objectFit='contain' maxWidth='300px' />
-
-          <Button
-            colorScheme={collected[set]?.[selected?.no] ? 'green' : 'red'}
-            onClick={() => collectCard({ set, no: selected.no })}
-            mt='10px'
-          >
-            {collected[set]?.[selected?.no] ? 'Collected' : 'Not Collected'}
-          </Button>
-        </ModalContent>
-      </Modal>
+      <CardModal
+        isOpen={isOpen}
+        onClose={onClose}
+        onButtonClick={() => collectCard({ setId: setData.id, no: selected?.no })}
+        isCollected={collected[setData.id]?.[selected?.no]}
+        setId={setData.id}
+        setImageId={setData.imageId}
+        cardNo={selected?.no}
+        cardName={selected?.name}
+      />
     </Box>
   )
 }
