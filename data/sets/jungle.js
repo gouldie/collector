@@ -1,4 +1,5 @@
 export default {
+  id: 'jungle',
   name: 'Jungle',
   image: 'jungle.png',
   released: 'Jun 16th 1999',

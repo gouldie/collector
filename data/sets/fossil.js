@@ -1,4 +1,5 @@
 export default {
+  id: 'fossil',
   name: 'Fossil',
   image: 'fossil.png',
   released: 'Oct 10th 1999',

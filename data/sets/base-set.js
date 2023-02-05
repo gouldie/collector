@@ -1,4 +1,5 @@
 export default {
+  id: 'base-set',
   name: 'Base Set',
   image: 'base-set.png',
   released: 'Jan 9th 1999',

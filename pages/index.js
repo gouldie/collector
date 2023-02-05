@@ -14,47 +14,49 @@ export default function Home() {
       </Text>
 
       <ClientOnly>
-        {seriesData.map(series => (
-          <Box key={series.title}>
-            <Text fontSize='lg' mb='16px'>
-              {series.title}
-            </Text>
+        <Box display='flex' flexWrap='wrap'>
+          {seriesData.map(series => (
+            <Box key={series.title} p='20px'>
+              <Text fontSize='lg' mb='16px'>
+                {series.title}
+              </Text>
 
-            {series.sets.map(set => {
-              const totalCards = Object.keys(set.cards).length
-              const collectedCards = Object.values(collected[set.id]).filter(Boolean).length
+              {series.sets.map(set => {
+                const totalCards = Object.keys(set.cards).length
+                const collectedCards = Object.values(collected[set.id] || {}).filter(Boolean).length
 
-              return (
-                <Box key={set.name} mb='6px'>
-                  <Box display='flex' alignItems='center' mb='5px'>
-                    <Image
-                      src={`${S3_URL}/logos/${set.image}`}
-                      alt='Pokemon'
-                      sx={{ width: '25px', display: 'block', mr: '10px' }}
-                    />
+                return (
+                  <Box key={set.name} mb='6px'>
+                    <Box display='flex' alignItems='center' mb='5px'>
+                      <Image
+                        src={`${S3_URL}/logos/${set.image}`}
+                        alt='Set Logo'
+                        sx={{ width: '25px', display: 'block', mr: '10px' }}
+                      />
 
-                    <Text fontSize='sm' width='150px'>
-                      {set.name}
-                    </Text>
+                      <Text fontSize='sm' width='150px'>
+                        {set.name}
+                      </Text>
+                    </Box>
+
+                    <Box display='flex' alignItems='center'>
+                      <Progress
+                        hasStripe
+                        value={(collectedCards / totalCards) * 100}
+                        width='150px'
+                        mr='10px'
+                      />
+
+                      <Text fontSize='sm' position='relative' top='-2px'>
+                        {collectedCards}/{totalCards}
+                      </Text>
+                    </Box>
                   </Box>
-
-                  <Box display='flex' alignItems='center'>
-                    <Progress
-                      hasStripe
-                      value={(collectedCards / totalCards) * 100}
-                      width='150px'
-                      mr='10px'
-                    />
-
-                    <Text fontSize='sm' position='relative' top='-2px'>
-                      {collectedCards}/{totalCards}
-                    </Text>
-                  </Box>
-                </Box>
-              )
-            })}
-          </Box>
-        ))}
+                )
+              })}
+            </Box>
+          ))}
+        </Box>
       </ClientOnly>
     </Box>
   )

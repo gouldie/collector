@@ -10,11 +10,7 @@
 
 import useLocalStorage from 'hooks/useLocalStorage'
 
-const defaultValue = {
-  'base-set': {},
-  fossil: {},
-  jungle: {}
-}
+const defaultValue = {}
 
 function useCollected() {
   const [collected, setCollected] = useLocalStorage('collected', defaultValue)

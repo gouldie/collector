@@ -38,7 +38,7 @@ export default function CardList({ set, cards, filter, sort }) {
             key={card.image}
             set={set}
             {...card}
-            isCollected={!!collected[set][card.no]}
+            isCollected={!!collected[set]?.[card.no]}
             onClick={() => {
               onOpen(true)
               setSelected(card)
@@ -53,11 +53,11 @@ export default function CardList({ set, cards, filter, sort }) {
           <Image src={`${S3_URL}/${set}/${selected?.image}`} objectFit='contain' maxWidth='300px' />
 
           <Button
-            colorScheme={collected[set][selected?.no] ? 'green' : 'red'}
+            colorScheme={collected[set]?.[selected?.no] ? 'green' : 'red'}
             onClick={() => collectCard({ set, no: selected.no })}
             mt='10px'
           >
-            {collected[set][selected?.no] ? 'Collected' : 'Not Collected'}
+            {collected[set]?.[selected?.no] ? 'Collected' : 'Not Collected'}
           </Button>
         </ModalContent>
       </Modal>
