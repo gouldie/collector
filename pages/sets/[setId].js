@@ -30,7 +30,7 @@ export default function Set({ isDesktop }) {
         setSort={setSort}
       />
       <ClientOnly>
-        <CardList setData={setData} filter={filter} sort={sort} />
+        <CardList setData={setData} filter={filter} sort={sort} key={setId} />
       </ClientOnly>
     </Box>
   )
