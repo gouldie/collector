@@ -18,7 +18,7 @@ function Card({ name, setId, fileName, onClick, isCollected }, ref) {
         alt={`${name} pokemon card`}
         width={105}
         height={143}
-        sizes='105px'
+        sizes='300px'
         style={{
           width: '100%',
           height: 'auto'
