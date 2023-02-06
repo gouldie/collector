@@ -20,7 +20,7 @@ export default function Set({ isDesktop }) {
   const setData = require('../../data/sets/' + setId).default || {}
 
   return (
-    <Box>
+    <Box key={setId}>
       <SetHeader
         setData={setData}
         filter={filter}
@@ -30,7 +30,7 @@ export default function Set({ isDesktop }) {
         setSort={setSort}
       />
       <ClientOnly>
-        <CardList setData={setData} filter={filter} sort={sort} key={setId} />
+        <CardList setData={setData} filter={filter} sort={sort} />
       </ClientOnly>
     </Box>
   )
