@@ -1,7 +1,20 @@
-import { Box, Heading, Image, Text, useColorMode } from '@chakra-ui/react'
-import { S3_URL } from '@globals'
+import Image from 'next/image'
+import { Box, Heading, Text, useColorMode } from '@chakra-ui/react'
 import SearchBar from 'components/SearchBar'
 import Select from 'components/Select'
+import logoBaseSet from 'public/logos/base-set.png'
+import logoJungle from 'public/logos/jungle.png'
+import logoFossil from 'public/logos/fossil.png'
+import logoGymHeroes from 'public/logos/gym-heroes.png'
+import logoGymChallenge from 'public/logos/gym-challenge.png'
+
+const logos = {
+  'base-set': logoBaseSet,
+  jungle: logoJungle,
+  fossil: logoFossil,
+  'gym-heroes': logoGymHeroes,
+  'gym-challenge': logoGymChallenge
+}
 
 function Tag({ tag, sx = {} }) {
   const { colorMode } = useColorMode()
@@ -38,7 +51,11 @@ export default function SetHeader({ isDesktop, setData, filter, setFilter, sort,
         flexDirection={isDesktop ? 'row' : 'column'}
       >
         <Box display='flex' alignItems='center' mb={!isDesktop && '20px'}>
-          <Image src={`${S3_URL}/logos/${id}.png`} alt='Pokemon' style={{ maxHeight: '40px' }} />
+          <Image
+            src={logos[id]}
+            alt={`${name} set logo`}
+            style={{ maxHeight: '40px', width: 'auto' }}
+          />
 
           <Heading as='h1' size='lg' sx={{ ml: '25px' }}>
             {name}

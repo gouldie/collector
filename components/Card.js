@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Box } from '@chakra-ui/react'
 import { S3_URL } from '@globals'
 
-function Card({ setId, fileName, onClick, isCollected }, ref) {
+function Card({ name, setId, fileName, onClick, isCollected }, ref) {
   return (
     <Box
       ref={ref}
@@ -12,13 +12,10 @@ function Card({ setId, fileName, onClick, isCollected }, ref) {
       borderRadius='5px'
       _hover={{ boxShadow: '0 0 5px #ddd' }}
       opacity={isCollected ? 1 : 0.3}
-      // position='relative'
-      // width='100px'
-      // height='80px'
     >
       <Image
         src={`${S3_URL}/${setId}/${fileName}`}
-        alt='Pokemon'
+        alt={`${name} pokemon card`}
         width={105}
         height={143}
         sizes='105px'
@@ -26,11 +23,6 @@ function Card({ setId, fileName, onClick, isCollected }, ref) {
           width: '100%',
           height: 'auto'
         }}
-        // fill
-        // sizes='100vw'
-        // style={{
-        //   objectFit: 'cover'
-        // }}
       />
     </Box>
   )

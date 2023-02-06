@@ -35,7 +35,7 @@ export default function CardList({ setData, filter, sort }) {
           return (
             <Card
               key={card.no}
-              {...card}
+              name={card.name}
               setId={setData.id}
               fileName={fileName}
               isCollected={!!collected[setData.id]?.[card.no]}

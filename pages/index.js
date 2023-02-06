@@ -1,8 +1,21 @@
-import { Box, Progress, Text, Image } from '@chakra-ui/react'
+import Image from 'next/image'
+import { Box, Progress, Text } from '@chakra-ui/react'
 import seriesData from 'data/series'
 import useCollected from 'hooks/useCollected'
 import ClientOnly from 'utils/clientOnly'
-import { S3_URL } from '@globals'
+import logoBaseSet from 'public/logos/base-set.png'
+import logoJungle from 'public/logos/jungle.png'
+import logoFossil from 'public/logos/fossil.png'
+import logoGymHeroes from 'public/logos/gym-heroes.png'
+import logoGymChallenge from 'public/logos/gym-challenge.png'
+
+const logos = {
+  'base-set': logoBaseSet,
+  jungle: logoJungle,
+  fossil: logoFossil,
+  'gym-heroes': logoGymHeroes,
+  'gym-challenge': logoGymChallenge
+}
 
 export default function Home() {
   const { collected } = useCollected()
@@ -29,9 +42,9 @@ export default function Home() {
                   <Box key={set.name} mb='6px'>
                     <Box display='flex' alignItems='center' mb='5px'>
                       <Image
-                        src={`${S3_URL}/logos/${set.id}.png`}
-                        alt='Set Logo'
-                        sx={{ width: '25px', display: 'block', mr: '10px' }}
+                        src={logos[set.id]}
+                        alt={`${set.name} set logo`}
+                        style={{ width: '25px', marginRight: '10px' }}
                       />
 
                       <Text fontSize='sm' width='150px'>
