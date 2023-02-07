@@ -2,6 +2,7 @@ import baseSet from './sets/base-set'
 import jungle from './sets/jungle'
 import fossil from './sets/fossil'
 import gymHeroes from './sets/gym-heroes'
+import gymChallenge from './sets/gym-challenge'
 
 export default [
   {
@@ -10,6 +11,6 @@ export default [
   },
   {
     title: 'Gym Heroes Series',
-    sets: [{ ...gymHeroes }]
+    sets: [{ ...gymHeroes }, { ...gymChallenge }]
   }
 ]
